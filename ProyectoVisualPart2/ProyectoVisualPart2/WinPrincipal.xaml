@@ -16,7 +16,7 @@
         <Label x:Name="label" Content="Ingreso&#xD;&#xA;" HorizontalAlignment="Left" Margin="217,94,0,0" VerticalAlignment="Top" Width="116"/>
         <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Margin="75,145,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="checkBox" Content="CheckBox" HorizontalAlignment="Left" Margin="178,171,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="311,224,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="386,194,0,0" VerticalAlignment="Top" Width="75"/>
 
     </Grid>
 </Window>
