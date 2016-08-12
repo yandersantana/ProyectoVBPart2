@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoVisualPart2"
         mc:Ignorable="d"
-        Title="winAdministrador" Height="329.487" Width="605.128">
-    <Grid Margin="0,0,0,-47" Background="#FF92EAD6">
+        Title="winAdministrador" Height="411.538" Width="605.128" Closing="Window_Closing">
+    <Grid Margin="0,0,0,-1" Background="#FF92EAD6">
         <Label x:Name="lblBienv" Content="Bienvenido" HorizontalAlignment="Left" Margin="185,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.166,2.419" FontFamily="Ravie" FontSize="24"/>
         <Label x:Name="label_Copy" Content="A continuacion escoga una de las opciones a realizar" HorizontalAlignment="Left" Margin="223,67,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.166,2.419" FontFamily="Pristina" FontSize="22"/>
         <Button x:Name="btnNewVendedor" Content="Registrar Vendedores" HorizontalAlignment="Left" Margin="304,106,0,0" VerticalAlignment="Top" Width="199" BorderBrush="#FF63E263" Background="#FF83EC83" Height="26" FontFamily="Script MT Bold" FontSize="16"/>
