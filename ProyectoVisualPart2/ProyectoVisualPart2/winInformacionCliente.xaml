@@ -1,0 +1,29 @@
+﻿<Window x:Class="winInformacionCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoVisualPart2"
+        mc:Ignorable="d"
+        Title="winInformacionCliente" Height="417.284" Width="369.136" Background="#FFA7F124">
+    <Grid>
+        <Label x:Name="label_Copy" Content="Nombre:" HorizontalAlignment="Left" Margin="37,45,0,0" VerticalAlignment="Top" Height="30" Width="80" FontFamily="Chiller" FontSize="18"/>
+        <TextBox x:Name="txtNombre" Text ="{Binding Nombre}" HorizontalAlignment="Left" Height="21" Margin="151,47,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <Label x:Name="label_Copy1" Content="Apellido" HorizontalAlignment="Left" Margin="37,79,0,0" VerticalAlignment="Top" Height="27" Width="80" RenderTransformOrigin="0.613,0.386" FontFamily="Chiller" FontSize="18"/>
+        <TextBox x:Name="txtApellido" Text ="{Binding Formula}" HorizontalAlignment="Left" Height="22" Margin="151,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <Label x:Name="label_Copy2" Content="Cedula:" HorizontalAlignment="Left" Margin="37,112,0,0" VerticalAlignment="Top" Height="25" Width="61" FontFamily="Chiller" FontSize="18"/>
+        <TextBox x:Name="txtCedula" Text ="{Binding Costo}" HorizontalAlignment="Left" Height="22" Margin="151,115,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <Label x:Name="label_Copy3" Content="Edad:" HorizontalAlignment="Left" Margin="37,145,0,0" VerticalAlignment="Top" Height="32" Width="64" FontFamily="Chiller" FontSize="18"/>
+        <TextBox x:Name="txtEdad" Text ="{Binding Precio}" HorizontalAlignment="Left" Height="22" Margin="151,147,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <Label x:Name="label_Copy5" Content="DATOS DEL CLIENTE" HorizontalAlignment="Left" Margin="94,12,0,0" VerticalAlignment="Top" Height="30" Width="185" FontFamily="Forte" FontSize="18"/>
+        <Label x:Name="label_Copy4" Content="Email:" HorizontalAlignment="Left" Margin="37,178,0,0" VerticalAlignment="Top" Height="30" Width="80" FontFamily="Chiller" FontSize="18"/>
+        <TextBox x:Name="txtEmail" Text ="{Binding Nombre}" HorizontalAlignment="Left" Height="22" Margin="151,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <Label x:Name="label_Copy6" Content="Telefono" HorizontalAlignment="Left" Margin="37,212,0,0" VerticalAlignment="Top" Height="27" Width="80" RenderTransformOrigin="0.613,0.386" FontFamily="Chiller" FontSize="18"/>
+        <TextBox x:Name="txtTelefono" Text ="{Binding Formula}" HorizontalAlignment="Left" Height="21" Margin="151,216,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <Label x:Name="label_Copy7" Content="Genero:" HorizontalAlignment="Left" Margin="37,245,0,0" VerticalAlignment="Top" Height="25" Width="80" FontFamily="Chiller" FontSize="18"/>
+        <TextBox x:Name="txtGenero" Text ="{Binding Costo}" HorizontalAlignment="Left" Height="21" Margin="151,249,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <Label x:Name="label_Copy8" Content="Tipo:" HorizontalAlignment="Left" Margin="37,279,0,0" VerticalAlignment="Top" Height="32" Width="64" FontFamily="Chiller" FontSize="18"/>
+        <TextBox x:Name="txtTipo" Text ="{Binding Precio}" HorizontalAlignment="Left" Height="21" Margin="151,281,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <Button x:Name="button" Content="Actualizar" HorizontalAlignment="Left" Margin="126,324,0,0" VerticalAlignment="Top" Width="119" FontFamily="Showcard Gothic" FontSize="14" Height="33"/>
+    </Grid>
+</Window>
