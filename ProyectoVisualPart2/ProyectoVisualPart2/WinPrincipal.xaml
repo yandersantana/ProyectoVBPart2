@@ -9,14 +9,18 @@
     <Grid>
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="#FF6394EA" Offset="0"/>
-                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="#FF6AA2E6" Offset="0"/>
+                <GradientStop Color="#FF3EDC78" Offset="1"/>
             </LinearGradientBrush>
         </Grid.Background>
-        <Label x:Name="label" Content="Ingreso&#xD;&#xA;" HorizontalAlignment="Left" Margin="217,94,0,0" VerticalAlignment="Top" Width="116"/>
-        <Label x:Name="label1" Content="Label" HorizontalAlignment="Left" Margin="75,145,0,0" VerticalAlignment="Top"/>
-        <CheckBox x:Name="checkBox" Content="CheckBox" HorizontalAlignment="Left" Margin="178,171,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="button" Content="Button" HorizontalAlignment="Left" Margin="386,244,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label x:Name="label" Content="Usuario:" HorizontalAlignment="Left" Margin="119,118,0,0" VerticalAlignment="Top" Height="30" Width="74" FontSize="16"/>
+        <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="30" Margin="241,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
+        <Label x:Name="label_Copy" Content="Contraseña:" HorizontalAlignment="Left" Margin="113,173,0,0" VerticalAlignment="Top" Height="30" Width="103" FontSize="16"/>
+        <PasswordBox x:Name="txtClave" HorizontalAlignment="Left" Margin="241,173,0,0" VerticalAlignment="Top" Width="151" Height="30"/>
+        <Label x:Name="label_Copy1" Content="Login&#xA;" HorizontalAlignment="Left" Margin="217,72,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" FontFamily="Source Sans Pro" Height="42" Width="73"/>
+        <Button x:Name="btn_aceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="119,248,0,0" VerticalAlignment="Top" Width="100" Height="33" FontSize="16" Background="#FF1CD6C6" BorderBrush="{x:Null}"/>
+        <Button x:Name="btn_cancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="292,248,0,0" VerticalAlignment="Top" Width="100" Height="33" FontSize="16" Background="#FF2AE2C1" Foreground="#FF0E0C0C" BorderBrush="{x:Null}"/>
+        <Label x:Name="label" Content="Tienda de Viveres K&amp;Y" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="128,30,0,0" Width="300" FontSize="20" FontFamily="Showcard Gothic" Foreground="#FF1725B6"/>
 
     </Grid>
 </Window>
