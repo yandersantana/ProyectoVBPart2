@@ -26,7 +26,7 @@ Namespace My.Resources
      Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
      Global.System.Runtime.CompilerServices.CompilerGeneratedAttribute(),  _
      Global.Microsoft.VisualBasic.HideModuleNameAttribute()>  _
-    Friend Module Resources
+    Public Module Resources
         
         Private resourceMan As Global.System.Resources.ResourceManager
         
@@ -36,7 +36,7 @@ Namespace My.Resources
         '''  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
         '''</summary>
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
-        Friend ReadOnly Property ResourceManager() As Global.System.Resources.ResourceManager
+        Public ReadOnly Property ResourceManager() As Global.System.Resources.ResourceManager
             Get
                 If Object.ReferenceEquals(resourceMan, Nothing) Then
                     Dim temp As Global.System.Resources.ResourceManager = New Global.System.Resources.ResourceManager("ProyectoVisualPart2.Resources", GetType(Resources).Assembly)
@@ -51,7 +51,7 @@ Namespace My.Resources
         '''  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
         '''</summary>
         <Global.System.ComponentModel.EditorBrowsableAttribute(Global.System.ComponentModel.EditorBrowsableState.Advanced)>  _
-        Friend Property Culture() As Global.System.Globalization.CultureInfo
+        Public Property Culture() As Global.System.Globalization.CultureInfo
             Get
                 Return resourceCulture
             End Get
@@ -61,12 +61,102 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca una cadena traducida similar a Public Class Cliente
+        '''    Inherits Persona
+        '''    Private _tipo As String
+        '''    Public Property Tipo() As String
+        '''        Get
+        '''            Return _tipo
+        '''        End Get
+        '''        Set(ByVal value As String)
+        '''            _tipo = value
+        '''        End Set
+        '''    End Property
+        '''
+        '''    Public Sub New()
+        '''
+        '''    End Sub
+        '''    Public Sub New(nombre As String, apellido As String)
+        '''        Me.Nombre = nombre
+        '''        Me.Apellido = apellido
+        '''    End Sub
+        '''
+        '''    Public Sub New(nombre As String, apellido As String, edad As Short, ema [resto de la cadena truncado]&quot;;.
+        '''</summary>
+        Public ReadOnly Property Cliente() As String
+            Get
+                Return ResourceManager.GetString("Cliente", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
-        Friend ReadOnly Property locked_dhj() As System.Drawing.Bitmap
+        Public ReadOnly Property locked_dhj() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("locked_dhj", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Public Class Persona
+        '''    Private _nombre As String
+        '''    Public Property Nombre() As String
+        '''        Get
+        '''            Return _nombre
+        '''        End Get
+        '''        Set(ByVal value As String)
+        '''            _nombre = value
+        '''        End Set
+        '''    End Property
+        '''
+        '''    Private _apellido As String
+        '''    Public Property Apellido() As String
+        '''        Get
+        '''            Return _apellido
+        '''        End Get
+        '''        Set(ByVal value As String)
+        '''            _apellido = value
+        '''        End Set
+        '''    End Property
+        '''
+        '''
+        '''    Private _edad  [resto de la cadena truncado]&quot;;.
+        '''</summary>
+        Public ReadOnly Property Persona() As String
+            Get
+                Return ResourceManager.GetString("Persona", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Busca una cadena traducida similar a Imports System.Xml
+        '''
+        '''Public Class Vendedor
+        '''    Inherits Persona
+        '''    Private _usuario As String
+        '''    Public Property Usuario() As String
+        '''        Get
+        '''            Return _usuario
+        '''        End Get
+        '''        Set(ByVal value As String)
+        '''            _usuario = value
+        '''        End Set
+        '''    End Property
+        '''
+        '''    Private _contraseña As String
+        '''    Public Property Contraseña() As String
+        '''        Get
+        '''            Return _contraseña
+        '''        End Get
+        '''        Set(ByVal value As String)
+        '''            _contraseña = value
+        ''' [resto de la cadena truncado]&quot;;.
+        '''</summary>
+        Public ReadOnly Property Vendedor() As String
+            Get
+                Return ResourceManager.GetString("Vendedor", resourceCulture)
             End Get
         End Property
     End Module

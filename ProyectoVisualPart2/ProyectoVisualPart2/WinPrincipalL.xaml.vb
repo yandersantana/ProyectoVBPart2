@@ -1,5 +1,7 @@
 ﻿Class WinPrincipalL
-    Private rutaUsuarios = "..\..\usuarios.xml"
+    Public loggedIn As Boolean
+    Public usuarios As ArrayList
+    Private strPath = "..\..\..\usuarios.xml"
     Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
 
     End Sub
