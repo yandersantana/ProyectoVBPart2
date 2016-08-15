@@ -1,0 +1,782 @@
+<?xml version="1.0"?>
+<productos shelf="New Arrivals">
+  <producto codigo="00000">
+    <nombre>ACEITE OLIVA EXTRA VIRGEN CARAPELLI 250M</nombre>
+    <pUnitario>3.39</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00001">
+    <nombre>ACEITE LA FAVORITA</nombre>
+    <pUnitario>2.00</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00002">
+    <nombre>ACEITE LA FAVORITA</nombre>
+    <pUnitario>2.00</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00003">
+    <nombre>ACEITE CRIOLLO</nombre>
+    <pUnitario>1.90</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00004">
+    <nombre>ACEITE PALMA DE ORO</nombre>
+    <pUnitario>1.50</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00005">
+    <nombre>ACONDICIONADOR PANTENE</nombre>
+    <pUnitario>4.02</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00006">
+    <nombre>ACONDICIONADOR HERBAL ESSENCES</nombre>
+    <pUnitario>5.02</pUnitario>
+    <iva>TRUE</iva>
+    <porcientoIva>14%</porcientoIva>
+  </producto>
+  <producto codigo="00007">
+    <nombre>ACONDICIONADOR SAVITAL</nombre>
+    <pUnitario>3.52</pUnitario>
+    <iva>TRUE</iva>
+    <porcientoIva>14%</porcientoIva>
+  </producto>
+  <producto codigo="00008">
+    <nombre>ACONDICIONADOR SEDAL CERAMIDAS</nombre>
+    <pUnitario>4.82</pUnitario>
+    <iva>TRUE</iva>
+    <porcientoIva>14%</porcientoIva>
+  </producto>
+  <producto codigo="00009">
+    <nombre>AGUA DASANI 450CC</nombre>
+    <pUnitario>0.29</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00010">
+    <nombre>AGUA SUMESA 500CC</nombre>
+    <pUnitario>0.24</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00010">
+    <nombre>AGUA VIVANT 500CC</nombre>
+    <pUnitario>0.44</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00011">
+    <nombre>AGUA MANANTIAL MINERAL</nombre>
+    <pUnitario>0.36</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00012">
+    <nombre>ALPISTE 500G LA PASTORA</nombre>
+    <pUnitario>1.15</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00013">
+    <nombre>ATUN ISABEL GRANDE</nombre>
+    <pUnitario>2.25</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00014">
+    <nombre>ATUN REAL GRANDE</nombre>
+    <pUnitario>2.15</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00015">
+    <nombre>ATUN ISABEL MEDIANO</nombre>
+    <pUnitario>1.75</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00016">
+    <nombre>ATUN REAL MEDIANO</nombre>
+    <pUnitario>1.55</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00017">
+    <nombre>AVENA JUGO MARACUYA</nombre>
+    <pUnitario>0.63</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00018">
+    <nombre>AVENA JUGO </nombre>
+    <pUnitario>0.50</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00019">
+    <nombre>AZUCAR SAN CARLOS 2KILO</nombre>
+    <pUnitario>2.02</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00020">
+    <nombre>AZUCAR SAN CARLOS KILO</nombre>
+    <pUnitario>0.92</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00021">
+    <nombre>AZUCAR LA TRONCAL KILO</nombre>
+    <pUnitario>1.02</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00022">
+    <nombre>BARRA CHOCOLATE 40GR AMERICAN</nombre>
+    <pUnitario>1.25</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00023">
+    <nombre>BARRA CHOCOLATE LA UNIVERSAL</nombre>
+    <pUnitario>1.15</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00024">
+    <nombre>BARRA CHOCOLATE PASSION FRUIT</nombre>
+    <pUnitario>2.18</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00025">
+    <nombre>BARRA CHOCOLATE PASSION CEDRON</nombre>
+    <pUnitario>1.95</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00026">
+    <nombre>BARRA GALLETA RELLENA FRUTILES</nombre>
+    <pUnitario>1.85</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00026">
+    <nombre>BEBIDA HIDRATANTE GATORADE 1L</nombre>
+    <pUnitario>1.35</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00027">
+    <nombre>BEBIDA HIDRATANTE POWERADE 350CC</nombre>
+    <pUnitario>0.45</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00028">
+    <nombre>BEBIDA HIDRATANTE PROFIT 350CC</nombre>
+    <pUnitario>0.65</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00029">
+    <nombre>BEBIDA HIDRATANTE SPORT MANDARINA</nombre>
+    <pUnitario>0.67</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00030">
+    <nombre>BEBIDA HIDRATANTE V220</nombre>
+    <pUnitario>0.67</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00031">
+    <nombre>BEBIDA HIDRATANTE TESALIA FUEGO TROPICAL</nombre>
+    <pUnitario>0.67</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00032">
+    <nombre>BEBIDA HIDRATANTE PET APPLE PICE</nombre>
+    <pUnitario>0.54</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00033">
+    <nombre>BEBIDA SOYA PASCUAL CHOCOLATE</nombre>
+    <pUnitario>5.01</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00034">
+    <nombre>BEBIDA NESQUICK RTD 200ML CHOCOLATE</nombre>
+    <pUnitario>0.66</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00035">
+    <nombre>BIZOCHUELO INGLES 450GR</nombre>
+    <pUnitario>3.45</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00036">
+    <nombre>BOCADITO EL GOLPE 27GR</nombre>
+    <pUnitario>0.27</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00037">
+    <nombre>BODY CREAM AMBER DREAM</nombre>
+    <pUnitario>2.45</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00038">
+    <nombre>BODY CREAM PARIS HOTEL</nombre>
+    <pUnitario>4.45</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00039">
+    <nombre>BODY LOTION CHERRY VAINILLA</nombre>
+    <pUnitario>4.29</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00040">
+    <nombre>BODY LOTION BURTS ALORE</nombre>
+    <pUnitario>15.75</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00041">
+    <nombre>BODY SPLASH VIOLETA</nombre>
+    <pUnitario>3.75</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00042">
+    <nombre>BOLSO NICOLE LEE</nombre>
+    <pUnitario>80.75</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00043">
+    <nombre>BOMBONES LA UNIVERSAL</nombre>
+    <pUnitario>2.75</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00044">
+    <nombre>BOMBOM BON O BON</nombre>
+    <pUnitario>1.55</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00045">
+    <nombre>CAFE NESCAFE</nombre>
+    <pUnitario>3.09</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00046">
+    <nombre>CAFE PRES2</nombre>
+    <pUnitario>3.29</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00047">
+    <nombre>CAFE CAPUCHINO</nombre>
+    <pUnitario>1.02</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00048">
+    <nombre>CARAMELO MENTITA 30GR</nombre>
+    <pUnitario>0.85</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00049">
+    <nombre>CARAMELO TAFI LECHE</nombre>
+    <pUnitario>1.29</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00050">
+    <nombre>CARAMELO TOFEE CAFE</nombre>
+    <pUnitario>0.90</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00051">
+    <nombre>CARAMELO HALLS</nombre>
+    <pUnitario>1.50</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00052">
+    <nombre>CARNE ENTERA TERNERA ENTERA KILO</nombre>
+    <pUnitario>2.04</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00053">
+    <nombre>CEREAL GOLD NESTLE</nombre>
+    <pUnitario>5.16</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00054">
+    <nombre>CEREAL NESQUICK</nombre>
+    <pUnitario>5.50</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00055">
+    <nombre>CHICLE BUBBLE TAPE STRAWBERRY</nombre>
+    <pUnitario>1.56</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00056">
+    <nombre>CHICLE SUPERBOMBA ADAMS MENTA</nombre>
+    <pUnitario>3.10</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00057">
+    <nombre>CHOCOLATE SAPITO</nombre>
+    <pUnitario>3.74</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00058">
+    <nombre>CHOCOLATE TABLET</nombre>
+    <pUnitario>1.34</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00059">
+    <nombre>CHORIZO LA VIENESA</nombre>
+    <pUnitario>1.50</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00060">
+    <nombre>CHORIZO PARRILLERO AMERICANO</nombre>
+    <pUnitario>9.50</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00061">
+    <nombre>CHULETA LA VIENESA</nombre>
+    <pUnitario>5.50</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00062">
+    <nombre>CHUPETE PLOP</nombre>
+    <pUnitario>1.50</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00063">
+    <nombre>COLA COCA COLA 3L</nombre>
+    <pUnitario>3.50</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00064">
+    <nombre>COLA FIORAVANTI 3L</nombre>
+    <pUnitario>3.30</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00065">
+    <nombre>COLA FIORAVANTI 1L</nombre>
+    <pUnitario>1.30</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00067">
+    <nombre>COLA MAS MANZANA 3L</nombre>
+    <pUnitario>3.10</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00068">
+    <nombre>COLA SPRITE 1L</nombre>
+    <pUnitario>1.10</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00069">
+    <nombre>COLA SPRITE 3L</nombre>
+    <pUnitario>3.30</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00070">
+    <nombre>COLA TROPICAL 1L</nombre>
+    <pUnitario>0.90</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00071">
+    <nombre>CREMA DE PEINAR PANTENE LISO</nombre>
+    <pUnitario>4.10</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00072">
+    <nombre>CREMA DE PEINAR PANTENE RIZO</nombre>
+    <pUnitario>4.10</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00073">
+    <nombre>CREMA DE PEINAR SAVITAL LISO</nombre>
+    <pUnitario>3.80</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00074">
+    <nombre>CREMA DE PEINAR SAVITAL RIZO</nombre>
+    <pUnitario>4.10</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00075">
+    <nombre>CREMA DE PEINAR SEDAL LISO PERFECTO</nombre>
+    <pUnitario>5.10</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00076">
+    <nombre>CREMA DE PEINAR SEDAL RIZO PERFECTO</nombre>
+    <pUnitario>5.10</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00077">
+    <nombre>CREMA FACIAL DIA RADIANTE</nombre>
+    <pUnitario>32.80</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00078">
+    <nombre>DESIFECTANTE NACIONAL</nombre>
+    <pUnitario>1.10</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00079">
+    <nombre>DESODORANTE LADY SPEED STICK</nombre>
+    <pUnitario>1.10</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00080">
+    <nombre>DETERGENTE CICLON</nombre>
+    <pUnitario>2.10</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00081">
+    <nombre>DETERGENTE DEJA</nombre>
+    <pUnitario>1.10</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00082">
+    <nombre>DETERGENTE LAVATODO</nombre>
+    <pUnitario>2.10</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00083">
+    <nombre>DURAZNO ENLATADO REAL</nombre>
+    <pUnitario>4.10</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00084">
+    <nombre>FIDEO AMANCAY 1L</nombre>
+    <pUnitario>1.10</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00085">
+    <nombre>FIDEO DON VICTORIO 2L</nombre>
+    <pUnitario>2.10</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00086">
+    <nombre>FIDEO ORIENTAL 2L</nombre>
+    <pUnitario>2.40</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00087">
+    <nombre>GALLETA AMOR </nombre>
+    <pUnitario>2.40</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00088">
+    <nombre>GALLETA CHIPS AHOY PAQUETE</nombre>
+    <pUnitario>3.40</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00089">
+    <nombre>GALLETA FESTIVAL</nombre>
+    <pUnitario>2.40</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00090">
+    <nombre>GALLETA OREO</nombre>
+    <pUnitario>4.40</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00091">
+    <nombre>GEL ANTIBACTERIAL FOREVER</nombre>
+    <pUnitario>1.30</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00092">
+    <nombre>GEL EGO</nombre>
+    <pUnitario>2.40</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00093">
+    <nombre>GEL AZUL</nombre>
+    <pUnitario>3.19</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00094">
+    <nombre>GELATINA GELA KOALA 120GR</nombre>
+    <pUnitario>0.21</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00095">
+    <nombre>GELATINA TONI 220GR</nombre>
+    <pUnitario>0.62</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00096">
+    <nombre>GELATINA ROYAL 1L</nombre>
+    <pUnitario>1.62</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00097">
+    <nombre>HARINA DE TRIGO 500GR LISTA</nombre>
+    <pUnitario>0.91</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00098">
+    <nombre>HELADO GINO 1L</nombre>
+    <pUnitario>2.55</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00099">
+    <nombre>HELADO PINGUINO 1L</nombre>
+    <pUnitario>3.78</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00100">
+    <nombre>HELADO TOPSY 1L</nombre>
+    <pUnitario>2.88</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00101">
+    <nombre>JABON LIQ MANZANILLA ANGELINO 250CC</nombre>
+    <pUnitario>2.98</pUnitario>
+    <iva>TRUE</iva>
+    <porcientoIva>14%</porcientoIva>
+  </producto>
+  <producto codigo="00102">
+    <nombre>JABON LIQ MANZANILLA PROTEX 250CC</nombre>
+    <pUnitario>2.08</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00103">
+    <nombre>JABON MAQUINADO 240GRX2 LIMPIEZA PROFUNDA</nombre>
+    <pUnitario>1.02</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00104">
+    <nombre>JAMON AMERICANO KILO JURIS</nombre>
+    <pUnitario>8.99</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00105">
+    <nombre>JARABE INFANTIL TEMPRA 120CC</nombre>
+    <pUnitario>1.59</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00106">
+    <nombre>JUGO DEL VALLE 3000CC</nombre>
+    <pUnitario>1.60</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00107">
+    <nombre>JUGO NATURA 3000CC</nombre>
+    <pUnitario>2.20</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00108">
+    <nombre>JUGO PULP 1LT</nombre>
+    <pUnitario>0.99</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00109">
+    <nombre>JUGO SUNNY MANZANA 1LT</nombre>
+    <pUnitario>2.99</pUnitario>
+    <iva>TRUE</iva>
+    <producto codigo="00110">
+      <nombre>JUGO TROPICAL PUNCH</nombre>
+      <pUnitario>0.22</pUnitario>
+      <iva>TRUE</iva>
+    </producto>
+    <producto codigo="00111">
+      <nombre>KCHITOS FRITOLAY</nombre>
+      <pUnitario>0.31</pUnitario>
+      <iva>TRUE</iva>
+    </producto>
+    <producto codigo="00112">
+      <nombre>LAVAVAJILLAS AXION</nombre>
+      <pUnitario>2.51</pUnitario>
+      <iva>TRUE</iva>
+    </producto>
+    <producto codigo="00113">
+      <nombre>LAVAVAJILLAS LIQUIDO</nombre>
+      <pUnitario>3.51</pUnitario>
+      <iva>TRUE</iva>
+    </producto>
+    <producto codigo="00114">
+      <nombre>LECHE CARTON PARMALAT 1LT</nombre>
+      <pUnitario>1.31</pUnitario>
+      <iva>FALSE</iva>
+    </producto>
+    <producto codigo="00115">
+      <nombre>LECHE CARTON LA LECHERA 1LT</nombre>
+      <pUnitario>1.71</pUnitario>
+      <iva>FALSE</iva>
+    </producto>
+    <producto codigo="00116">
+      <nombre>LECHE EN POLVO LA VAQUITA</nombre>
+      <pUnitario>1.91</pUnitario>
+      <iva>FALSE</iva>
+    </producto>
+    <producto codigo="00116">
+      <nombre>LECHE NIDO CRECIMIENTO</nombre>
+      <pUnitario>6.51</pUnitario>
+      <iva>FALSE</iva>
+    </producto>
+    <producto codigo="00117">
+      <nombre>LIMPIADOR MULTIUSO SPRAY</nombre>
+      <pUnitario>2.86</pUnitario>
+      <iva>TRUE</iva>
+    </producto>
+    <producto codigo="00117">
+      <nombre>MERMELADA DE NARANJA FACUNDO</nombre>
+      <pUnitario>2.26</pUnitario>
+      <iva>TRUE</iva>
+    </producto>
+    <producto codigo="00118">
+      <nombre>MERMELADA DE MORA SNOB</nombre>
+      <pUnitario>3.26</pUnitario>
+      <iva>TRUE</iva>
+    </producto>
+    <producto codigo="00119">
+      <nombre>MORTADELA DON DIEGO</nombre>
+      <pUnitario>3.76</pUnitario>
+      <iva>FALSE</iva>
+    </producto>
+    <producto codigo="00120">
+      <nombre>MORTADELA FRITZ</nombre>
+      <pUnitario>2.76</pUnitario>
+      <iva>FALSE</iva>
+    </producto>
+    <producto codigo="00121">
+      <nombre>PAN CALIFORNIA</nombre>
+      <pUnitario>1.25</pUnitario>
+      <iva>FALSE</iva>
+    </producto>
+  </producto>
+  <producto codigo="00122">
+    <nombre>PAPAS RUFFLES 350GR</nombre>
+    <pUnitario>3.25</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00123">
+    <nombre>PAPAS SARITA 350GR</nombre>
+    <pUnitario>2.75</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00124">
+    <nombre>PAPEL HIGUIENICO FAMILIA X4</nombre>
+    <pUnitario>1.00</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00125">
+    <nombre>QUESO CABRA 160GR MONDEL</nombre>
+    <pUnitario>3.80</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00126">
+    <nombre>QUESO ADNINA 100GR </nombre>
+    <pUnitario>2.80</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00127">
+    <nombre>QUESO LONCHA HAMBURGER CHEDDAR</nombre>
+    <pUnitario>3.65</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00128">
+    <nombre>ROSQUITAS PACK X8</nombre>
+    <pUnitario>3.37</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00129">
+    <nombre>RYSKOS 175GR</nombre>
+    <pUnitario>1.16</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00130">
+    <nombre>SALMON KILO</nombre>
+    <pUnitario>17.25</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00131">
+    <nombre>SALSA INGLESA SUPERBA</nombre>
+    <pUnitario>0.75</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00132">
+    <nombre>SALSA CHINA ORIENTAL</nombre>
+    <pUnitario>0.55</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00133">
+    <nombre>SALSA TOMATE LOS ANDES EXTRA</nombre>
+    <pUnitario>1.75</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00134">
+    <nombre>SALSA TAQUERA</nombre>
+    <pUnitario>2.89</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00135">
+    <nombre>SHAMPOO PANTENE</nombre>
+    <pUnitario>4.75</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00136">
+    <nombre>SHAMPOO SAVITAL</nombre>
+    <pUnitario>3.95</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00137">
+    <nombre>SHAMPOO SEDAL LISO PERFECTO</nombre>
+    <pUnitario>5.59</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00138">
+    <nombre>SHAMPOO SEDAL RIZOS DEFINIDOS</nombre>
+    <pUnitario>5.59</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00139">
+    <nombre>SUAVIZANTE SUAVITEL</nombre>
+    <pUnitario>2.65</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00140">
+    <nombre>SUAVIZANTE PERLA BEBE</nombre>
+    <pUnitario>6.65</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00141">
+    <nombre>TE NESTEA 200GR</nombre>
+    <pUnitario>2.59</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00142">
+    <nombre>TE TESALIA DURAZNO</nombre>
+    <pUnitario>0.39</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00143">
+    <nombre>TE TESALIA DURAZNO</nombre>
+    <pUnitario>0.60</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00144">
+    <nombre>TE TONI</nombre>
+    <pUnitario>0.56</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00145">
+    <nombre>TORTA HELADA PINGUINO</nombre>
+    <pUnitario>20.00</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00146">
+    <nombre>VITAMINA C CEBION 15X</nombre>
+    <pUnitario>10.00</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00147">
+    <nombre>VITAMINA D CALCIBON</nombre>
+    <pUnitario>17.00</pUnitario>
+    <iva>FALSE</iva>
+  </producto>
+  <producto codigo="00148">
+    <nombre>VITAMINA E FRESH</nombre>
+    <pUnitario>16.00</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00149">
+    <nombre>YOGURT TONI 180CC</nombre>
+    <pUnitario>0.73</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00150">
+    <nombre>YOGURT TONI 1L</nombre>
+    <pUnitario>4.73</pUnitario>
+    <iva>TRUE</iva>
+  </producto>
+  <producto codigo="00151">
+    <nombre>Galletas Mi Chocolate</nombre>
+    <pUnitario>250</pUnitario>
+    <iva>True</iva>
+  </producto>
+</productos>
