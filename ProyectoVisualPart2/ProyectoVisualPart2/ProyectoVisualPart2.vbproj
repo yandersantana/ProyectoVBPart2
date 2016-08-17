@@ -79,12 +79,19 @@
     <Compile Include="Persona.vb" />
     <None Include="Resources\Vendedor.vb" />
     <None Include="Resources\Cliente.vb" />
+    <Compile Include="Producto.vb" />
     <Compile Include="Vendedor.vb" />
     <Compile Include="winCliente.xaml.vb">
       <DependentUpon>winCliente.xaml</DependentUpon>
     </Compile>
     <Compile Include="winInformacionCliente.xaml.vb">
       <DependentUpon>winInformacionCliente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winListaProductos.xaml.vb">
+      <DependentUpon>winListaProductos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winListaVendedores.xaml.vb">
+      <DependentUpon>winListaVendedores.xaml</DependentUpon>
     </Compile>
     <Compile Include="winNewVendedor.xaml.vb">
       <DependentUpon>winNewVendedor.xaml</DependentUpon>
@@ -101,6 +108,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="winInformacionCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winListaProductos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winListaVendedores.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
