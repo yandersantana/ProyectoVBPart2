@@ -12,7 +12,7 @@
         <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="30" Margin="206,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
         <Label x:Name="label_Copy" Content="Contraseña:" HorizontalAlignment="Left" Margin="72,183,0,0" VerticalAlignment="Top" Height="30" Width="103" FontSize="16"/>
         <Label x:Name="label_Copy1" Content="Login&#xA;" HorizontalAlignment="Left" Margin="174,79,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="24" FontFamily="Source Sans Pro" Height="42" Width="73"/>
-        <Button x:Name="btn_aceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="85,272,0,0" VerticalAlignment="Top" Width="75" Height="25" FontSize="16" Background="#FF82C57C" BorderBrush="{x:Null}"/>
+        <Button x:Name="btn_aceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="84,266,0,0" VerticalAlignment="Top" Width="75" Height="25" FontSize="16" Background="#FF82C57C" BorderBrush="{x:Null}"/>
         <Button x:Name="btn_cancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="249,264,0,0" VerticalAlignment="Top" Width="83" Height="27" FontSize="16" Background="#FF87C384" Foreground="#FF0E0C0C" BorderBrush="{x:Null}"/>
         <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="206,183,0,0" VerticalAlignment="Top" Width="151" Height="30"/>
 

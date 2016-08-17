@@ -61,45 +61,6 @@ Namespace My.Resources
         End Property
         
         '''<summary>
-        '''  Busca una cadena traducida similar a Public Class Cliente
-        '''    Inherits Persona
-        '''    Private _tipo As String
-        '''    Public Property Tipo() As String
-        '''        Get
-        '''            Return _tipo
-        '''        End Get
-        '''        Set(ByVal value As String)
-        '''            _tipo = value
-        '''        End Set
-        '''    End Property
-        '''
-        '''    Public Sub New()
-        '''
-        '''    End Sub
-        '''    Public Sub New(nombre As String, apellido As String)
-        '''        Me.Nombre = nombre
-        '''        Me.Apellido = apellido
-        '''    End Sub
-        '''
-        '''    Public Sub New(nombre As String, apellido As String, edad As Short, ema [resto de la cadena truncado]&quot;;.
-        '''</summary>
-        Public ReadOnly Property Cliente() As String
-            Get
-                Return ResourceManager.GetString("Cliente", resourceCulture)
-            End Get
-        End Property
-        
-        '''<summary>
-        '''  Busca un recurso adaptado de tipo System.Byte[].
-        '''</summary>
-        Public ReadOnly Property dataBaseVisual() As Byte()
-            Get
-                Dim obj As Object = ResourceManager.GetObject("dataBaseVisual", resourceCulture)
-                Return CType(obj,Byte())
-            End Get
-        End Property
-        
-        '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
         Public ReadOnly Property locked_dhj() As System.Drawing.Bitmap
