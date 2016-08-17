@@ -90,6 +90,16 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  Busca un recurso adaptado de tipo System.Byte[].
+        '''</summary>
+        Public ReadOnly Property dataBaseVisual() As Byte()
+            Get
+                Dim obj As Object = ResourceManager.GetObject("dataBaseVisual", resourceCulture)
+                Return CType(obj,Byte())
+            End Get
+        End Property
+        
+        '''<summary>
         '''  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         '''</summary>
         Public ReadOnly Property locked_dhj() As System.Drawing.Bitmap
