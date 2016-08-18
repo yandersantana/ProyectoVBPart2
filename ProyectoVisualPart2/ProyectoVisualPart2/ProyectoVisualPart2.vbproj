@@ -193,11 +193,6 @@
     <None Include="Resources\locked-dhj.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="dataBaseVisual.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="dataBaseVisual.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
