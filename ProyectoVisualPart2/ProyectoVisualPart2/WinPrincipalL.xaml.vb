@@ -29,11 +29,20 @@ Class WinPrincipalL
                 MessageBox.Show("No paso la autenticacion")
 
             Else
-                MessageBox.Show("autenticacion correcta")
-                Dim winAd As New winAdministrador
-                winAd.Owner = Me
-                winAd.Show()
-                Me.Hide()
+                'MessageBox.Show("autenticacion correcta")
+
+
+                cmd.CommandText = "SELECT administrador FROM usuarios WHERE Usuario=txtUsuario.Text"
+                Dim risul As Boolean = cmd.ExecuteScalar
+                If (risul) Then
+                    Dim winAd As New winAdministrador
+                    winAd.Owner = Me
+                    winAd.Show()
+                    Me.Hide()
+                Else
+                    MessageBox.Show("Eres vendedor")
+                End If
+
             End If
 
         End Using
