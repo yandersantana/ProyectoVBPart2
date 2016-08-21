@@ -48,4 +48,8 @@ Class WinPrincipalL
         End Using
 
     End Sub
+
+    Private Sub btn_cancelar_Click(sender As Object, e As RoutedEventArgs) Handles btn_cancelar.Click
+        Me.Close()
+    End Sub
 End Class
