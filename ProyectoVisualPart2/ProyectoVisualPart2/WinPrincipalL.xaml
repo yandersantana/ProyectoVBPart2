@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoVisualPart2"
         mc:Ignorable="d"
-        Title="Supermercados Yanke" Height="347.154" Width="429.201" Loaded="Window_Loaded" Background="#FFC4D36A">
+        Title="Supermercados Yanke" Height="347.154" Width="429.201" Loaded="Window_Loaded" Background="#FF803030">
+  
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="locked-dhj.jpg"/>
+        </Grid.Background>
 
         <Label x:Name="label" Content="Usuario:" HorizontalAlignment="Left" Margin="72,139,0,0" VerticalAlignment="Top" Height="30" Width="74" FontSize="16"/>
         <TextBox x:Name="txtUsuario" HorizontalAlignment="Left" Height="30" Margin="206,139,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151"/>
