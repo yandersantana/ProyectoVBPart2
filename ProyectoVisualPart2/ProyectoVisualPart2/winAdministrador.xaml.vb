@@ -17,4 +17,10 @@
 
 
     End Sub
+
+    Private Sub btnNewProducto_Click(sender As Object, e As RoutedEventArgs) Handles btnNewProducto.Click
+        Dim winNewPro As New WinAggProducto
+        winNewPro.Owner = Me
+        winNewPro.Show()
+    End Sub
 End Class

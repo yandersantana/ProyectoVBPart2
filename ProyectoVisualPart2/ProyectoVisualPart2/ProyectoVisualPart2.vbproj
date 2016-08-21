@@ -71,16 +71,14 @@
     </ApplicationDefinition>
     <None Include="Resources\Persona.vb" />
     <Compile Include="Cliente.vb" />
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Persona.vb" />
     <None Include="Resources\Vendedor.vb" />
     <None Include="Resources\Cliente.vb" />
     <Compile Include="Producto.vb" />
     <Compile Include="Vendedor.vb" />
+    <Compile Include="WinAggProducto.xaml.vb">
+      <DependentUpon>WinAggProducto.xaml</DependentUpon>
+    </Compile>
     <Compile Include="winCliente.xaml.vb">
       <DependentUpon>winCliente.xaml</DependentUpon>
     </Compile>
@@ -100,6 +98,10 @@
       <DependentUpon>winVendedor.xaml</DependentUpon>
     </Compile>
     <Page Include="winAdministrador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WinAggProducto.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -178,7 +180,7 @@
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
