@@ -1,0 +1,35 @@
+﻿<Window x:Class="winFactura"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoVisualPart2"
+        mc:Ignorable="d"
+        Title="winFactura" Height="540.336" Width="1071.428">
+    <Grid>
+        <GroupBox x:Name="Producto" Header="Producto" HorizontalAlignment="Left" Margin="11,193,0,0" VerticalAlignment="Top" Height="66" Width="1042">
+            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="60,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        </GroupBox>
+
+        <GroupBox x:Name="datosDelCliente" Header="Cliente" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="180" Width="1043"/>
+        <Label x:Name="label" Content="Código del Cliente" HorizontalAlignment="Left" Margin="22,32,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,0.876"/>
+        <Label x:Name="label_Copy1" Content="Nombre:" HorizontalAlignment="Left" Margin="22,63,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,0.876"/>
+        <Label x:Name="label_Copy" Content="Cédula" HorizontalAlignment="Left" Margin="22,94,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,0.876"/>
+        <Label x:Name="label_Copy2" Content="Teléfono" HorizontalAlignment="Left" Margin="22,122,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,0.876"/>
+        <Label x:Name="label_Copy3" Content="Dirección" HorizontalAlignment="Left" Margin="22,150,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,0.876"/>
+        <TextBox x:Name="texDireccion" HorizontalAlignment="Left" Height="19" Margin="146,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
+        <TextBox x:Name="txtTelefono" HorizontalAlignment="Left" Height="19" Margin="146,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
+        <TextBox x:Name="txtCodigo" HorizontalAlignment="Left" Height="19" Margin="146,36,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="19" Margin="146,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
+        <TextBox x:Name="txtCedula" HorizontalAlignment="Left" Height="19" Margin="146,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
+        <Label x:Name="label_Copy4" Content="Fecha" HorizontalAlignment="Left" Margin="614,148,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,0.876"/>
+        <Label x:Name="label_Copy5" Content="Número de Factura" HorizontalAlignment="Left" Margin="604,71,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,0.876"/>
+        <Label x:Name="label_Copy6" Content="Forma de Pago" HorizontalAlignment="Left" Margin="604,97,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,0.876"/>
+        <Label x:Name="label_Copy7" Content="Vendedor" HorizontalAlignment="Left" Margin="604,122,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,0.876"/>
+        <TextBox x:Name="texDireccion_Copy" HorizontalAlignment="Left" Height="19" Margin="728,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
+        <TextBox x:Name="txtTelefono_Copy" HorizontalAlignment="Left" Height="19" Margin="728,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
+        <TextBox x:Name="txtNombre_Copy" HorizontalAlignment="Left" Height="19" Margin="728,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
+        <TextBox x:Name="txtCedula_Copy" HorizontalAlignment="Left" Height="19" Margin="728,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
+
+    </Grid>
+</Window>

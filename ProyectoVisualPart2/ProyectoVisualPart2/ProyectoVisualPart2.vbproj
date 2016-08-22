@@ -82,6 +82,9 @@
     <Compile Include="winCliente.xaml.vb">
       <DependentUpon>winCliente.xaml</DependentUpon>
     </Compile>
+    <Compile Include="winFactura.xaml.vb">
+      <DependentUpon>winFactura.xaml</DependentUpon>
+    </Compile>
     <Compile Include="winInformacionCliente.xaml.vb">
       <DependentUpon>winInformacionCliente.xaml</DependentUpon>
     </Compile>
@@ -106,6 +109,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="winCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winFactura.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
