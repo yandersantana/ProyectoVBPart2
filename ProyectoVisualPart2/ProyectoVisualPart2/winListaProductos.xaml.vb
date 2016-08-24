@@ -2,32 +2,24 @@
 Imports System.Data.OleDb
 
 Public Class winListaProductos
-    Private dbPath = "ruta"
-    Private strConexion = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" & dbPath
+    Private strPath = "..\..\dataBaseVisual.mdb"
+    Private strConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & strPath
     Private dsProd As DataSet
     Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
-        Using dbConexion As New OleDbConnection(strConexion)
-            Dim consulta = "SELECT * FROM tbl_productos"
-            Dim AdProducto As New OleDbDataAdapter(New OleDbCommand(consulta, strConexion))
-
-            'Dim dsProducto As New winProducto
-            'AdProducto.Fill(dsProducto, "Productos")
-            'dtgListadoProductos.DataContext = dsProducto
-
+        Using dbConexion As New OleDbConnection(strConexion) 'entrar y salir de la base
+            Console.WriteLine("Conexion Exitosa")
+            Dim strQuery As String = "SELECT * FROM producto"
+            Dim dbAdapter As New OleDbDataAdapter(strQuery, dbConexion)
+            Dim dsMaster As New DataSet("Productos")
+            dbAdapter.Fill(dsMaster, "producto")
+            dtgProducto.DataContext = dsMaster
 
         End Using
+        Console.ReadLine()
 
     End Sub
 
-    Private Sub dtgListadoProductos_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles dtgListadoProductos.SelectionChanged
-        Dim fila As DataRow = sender.selectedItem
-        'Dim productos As New winProductos
-        'productos.owner=Me 
-        Dim unProducto As New Producto(fila(0), fila(1), fila(2), fila(3))
-        'productos.DataContext()=unProducto
-        'productos.show()
-        Me.Hide()
-
-
+    Private Sub salir_Click(sender As Object, e As RoutedEventArgs) Handles salir.Click
+        Me.Close()
     End Sub
 End Class

@@ -1,6 +1,8 @@
 ﻿Public Class winAdministrador
     Private Sub btnListaProductos_Click(sender As Object, e As RoutedEventArgs) Handles btnListaProductos.Click
-
+        Dim winListarProducto As New winListaProductos
+        winListarProducto.Owner = Me
+        winListarProducto.Show()
     End Sub
 
     Private Sub Window_Closing(sender As Object, e As ComponentModel.CancelEventArgs)

@@ -6,14 +6,14 @@
         xmlns:local="clr-namespace:ProyectoVisualPart2"
         mc:Ignorable="d"
         Title="winAdministrador" Height="411.538" Width="605.128" Closing="Window_Closing">
-    <Grid Margin="0,0,0,-1" Background="#FF38E4BD">
-        <Label x:Name="lblBienv" Content="Bienvenido" HorizontalAlignment="Left" Margin="185,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.166,2.419" FontFamily="Ravie" FontSize="24"/>
-        <Label x:Name="label_Copy" Content="A continuacion escoga una de las opciones a realizar" HorizontalAlignment="Left" Margin="223,67,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.166,2.419" FontFamily="Pristina" FontSize="22"/>
-        <Button x:Name="btnNewVendedor" Content="Registrar Vendedores" HorizontalAlignment="Left" Margin="304,106,0,0" VerticalAlignment="Top" Width="199" BorderBrush="#FF63E263" Background="#FF83EC83" Height="26" FontFamily="Script MT Bold" FontSize="16"/>
-        <Button x:Name="btnNewProducto" Content="Añadir Producto" HorizontalAlignment="Left" Margin="304,153,0,0" VerticalAlignment="Top" Width="199" BorderBrush="#FF63E263" Background="#FF83EC83" Height="24" FontFamily="Script MT Bold" FontSize="16"/>
-        <Button x:Name="btnListaVendedores" Content="Listar Vendedores" HorizontalAlignment="Left" Margin="304,196,0,0" VerticalAlignment="Top" Width="199" BorderBrush="#FF63E263" Background="#FF83EC83" Height="26" FontFamily="Script MT Bold" FontSize="16"/>
-        <Button x:Name="btnListaProductos" Content="Mostrar Lista Productos" HorizontalAlignment="Left" Margin="304,242,0,0" VerticalAlignment="Top" Width="199" BorderBrush="#FF63E263" Background="#FF83EC83" Height="26" FontFamily="Script MT Bold" FontSize="16"/>
-        <Button x:Name="btnBuscarFact" Content="Buscar Factura" HorizontalAlignment="Left" Margin="304,283,0,0" VerticalAlignment="Top" Width="199" BorderBrush="#FF63E263" Background="#FF83EC83" Height="26" FontFamily="Script MT Bold" FontSize="16"/>
+    <Grid Margin="0,0,0,-1" Background="White">
+        <Label x:Name="lblBienv" Content="Bienvenido" HorizontalAlignment="Left" Margin="207,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.166,2.419" FontFamily="Prestige Elite Std" FontSize="24"/>
+        <Label x:Name="label_Copy" Content="A continuacion escoga una de las opciones a realizar" HorizontalAlignment="Left" Margin="20,54,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.166,2.419" FontFamily="Prestige Elite Std" FontSize="18"/>
+        <Button x:Name="btnNewVendedor" Content="Registrar Vendedores" HorizontalAlignment="Left" Margin="304,106,0,0" VerticalAlignment="Top" Width="199" BorderBrush="#FF63E263" Background="#FFE7EEE7" Height="26" FontFamily="Script MT Bold" FontSize="16"/>
+        <Button x:Name="btnNewProducto" Content="Añadir Producto" HorizontalAlignment="Left" Margin="304,153,0,0" VerticalAlignment="Top" Width="199" BorderBrush="#FF63E263" Background="#FFE7FBE7" Height="24" FontFamily="Script MT Bold" FontSize="16"/>
+        <Button x:Name="btnListaVendedores" Content="Listar Vendedores" HorizontalAlignment="Left" Margin="304,196,0,0" VerticalAlignment="Top" Width="199" BorderBrush="#FF63E263" Background="#FFDDF7DD" Height="26" FontFamily="Script MT Bold" FontSize="16"/>
+        <Button x:Name="btnListaProductos" Content="Mostrar Lista Productos" HorizontalAlignment="Left" Margin="304,242,0,0" VerticalAlignment="Top" Width="199" BorderBrush="#FF63E263" Background="#FFE2F7E2" Height="26" FontFamily="Script MT Bold" FontSize="16"/>
+        <Button x:Name="btnBuscarFact" Content="Buscar Factura" HorizontalAlignment="Left" Margin="304,283,0,0" VerticalAlignment="Top" Width="199" BorderBrush="#FF63E263" Background="#FFE6F9E6" Height="26" FontFamily="Script MT Bold" FontSize="16"/>
         <Label x:Name="label1" Content="Aqui ira una imagen del administrador" HorizontalAlignment="Left" Height="200" Margin="40,111,0,0" VerticalAlignment="Top" Width="195" Background="#FFB6ADAD"/>
 
     </Grid>

@@ -71,6 +71,11 @@
     </ApplicationDefinition>
     <None Include="Resources\Persona.vb" />
     <Compile Include="Cliente.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Persona.vb" />
     <None Include="Resources\Vendedor.vb" />
     <None Include="Resources\Cliente.vb" />
@@ -188,6 +193,7 @@
       <Generator>PublicVbMyResourcesResXFileCodeGenerator</Generator>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
