@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoVisualPart2"
         mc:Ignorable="d"
-        Title="winFactura" Height="540.336" Width="1071.428">
+        Title="winFactura" Height="645.336" Width="1063.928">
     <Grid>
-        <GroupBox x:Name="Producto" Header="Producto" HorizontalAlignment="Left" Margin="11,193,0,0" VerticalAlignment="Top" Height="66" Width="1042">
-            <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="60,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+
+        <GroupBox x:Name="Producto" Header="Producto" HorizontalAlignment="Left" Margin="11,191,0,0" VerticalAlignment="Top" Height="75" Width="1042">
+            <TextBox x:Name="cantidad" HorizontalAlignment="Left" Height="23" Margin="509,27,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
         </GroupBox>
 
         <GroupBox x:Name="datosDelCliente" Header="Cliente" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Height="180" Width="1043"/>
@@ -30,6 +31,36 @@
         <TextBox x:Name="txtTelefono_Copy" HorizontalAlignment="Left" Height="19" Margin="728,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
         <TextBox x:Name="txtNombre_Copy" HorizontalAlignment="Left" Height="19" Margin="728,67,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
         <TextBox x:Name="txtCedula_Copy" HorizontalAlignment="Left" Height="19" Margin="728,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False"/>
+        <Label x:Name="label1" Content="Código" HorizontalAlignment="Left" Margin="44,205,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label2" Content="Nombre" HorizontalAlignment="Left" Margin="209,205,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="nombreProducto" HorizontalAlignment="Left" Height="23" Margin="185,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label x:Name="label3" Content="Precio Unitario" HorizontalAlignment="Left" Margin="374,205,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="pUnitario" HorizontalAlignment="Left" Height="23" Margin="362,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Label x:Name="label4" Content="Cantidad" HorizontalAlignment="Left" Margin="553,205,0,0" VerticalAlignment="Top" Width="80"/>
+        <TextBox x:Name="codigo" HorizontalAlignment="Left" Height="23" Margin="22,236,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="label5" Content="Iva" HorizontalAlignment="Left" Margin="737,205,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="iva" HorizontalAlignment="Left" Height="23" Margin="688,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
+        <Button x:Name="agregar" Content="Agregar" HorizontalAlignment="Left" Margin="834,216,0,0" VerticalAlignment="Top" Width="106" Background="#FFE8F1BD" Height="43" BorderBrush="#FFD2EA9F"/>
+        <DataGrid x:Name="detalle" HorizontalAlignment="Left" Margin="11,284,0,0" VerticalAlignment="Top" Height="144" Width="1035"/>
+        <Label x:Name="label6" Content="Subtotal" HorizontalAlignment="Left" Margin="737,430,0,0" VerticalAlignment="Top" Width="72"/>
+        <Label x:Name="label7" Content="Total" HorizontalAlignment="Left" Margin="737,530,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="subtotal" HorizontalAlignment="Left" Height="23" Margin="834,433,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Background="#FFFDC8C8"/>
+        <TextBox x:Name="total" HorizontalAlignment="Left" Height="41" Margin="834,515,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Background="#FFC7F2F9"/>
+        <TextBox x:Name="descuento" HorizontalAlignment="Left" Height="23" Margin="834,469,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Background="#FFD4F0DC"/>
+        <Label x:Name="label7_Copy" Content="Descuento" HorizontalAlignment="Left" Margin="737,474,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="eliminarProducto" Content="Eliminar Producto" HorizontalAlignment="Left" Margin="22,466,0,0" VerticalAlignment="Top" Width="137" Height="54" FontSize="14" Background="#FFF9B6B6" BorderBrush="#FFFF4949"/>
+        <Button x:Name="nuevaFactura" Content="Nueva factura" HorizontalAlignment="Left" Margin="290,466,0,0" VerticalAlignment="Top" Width="136" Height="54" FontSize="14" Background="#FFFAFFE9" BorderBrush="#FFD4D4A3"/>
+        <Button x:Name="imprimirFactura" Content="Imprimir Factura" HorizontalAlignment="Left" Margin="528,466,0,0" VerticalAlignment="Top" Width="138" Height="54" FontSize="14" Background="#FFE9FFF9" BorderBrush="#FF8BCDB8"/>
+        <Button x:Name="salir" Content="Salir" HorizontalAlignment="Left" Margin="281,551,0,0" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.5,0.5" Height="41" Background="#FFFDF0E3" FontSize="20" BorderBrush="#FFF7D6D3">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.122"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
 
     </Grid>
 </Window>

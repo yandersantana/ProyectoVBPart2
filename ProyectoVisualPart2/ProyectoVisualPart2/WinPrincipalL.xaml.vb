@@ -40,7 +40,10 @@ Class WinPrincipalL
                     winAd.Show()
                     Me.Hide()
                 Else
-                    MessageBox.Show("Eres vendedor")
+                    Dim winvendedor As New winFactura
+                    winvendedor.Owner = Me
+                    winvendedor.Show()
+                    Me.Hide()
                 End If
 
             End If
