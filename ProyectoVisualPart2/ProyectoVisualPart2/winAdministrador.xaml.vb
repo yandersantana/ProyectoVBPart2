@@ -25,4 +25,12 @@
         winNewPro.Owner = Me
         winNewPro.Show()
     End Sub
+
+    Private Sub btnListaVendedores_Click(sender As Object, e As RoutedEventArgs) Handles btnListaVendedores.Click
+
+        Dim winNewlv As New winListaVendedores
+        winNewlv.Owner = Me
+        winNewlv.Show()
+
+    End Sub
 End Class

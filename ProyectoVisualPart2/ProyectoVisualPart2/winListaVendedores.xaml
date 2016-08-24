@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="winListaVendedores" Height="272.289" Width="451.807" Loaded="Window_Loaded">
     <Grid>
-        <DataGrid x:Name="dtgListadoVendedores" Margin="10" ItemsSource="{Binding Path=Vendedores}"/>
+        <DataGrid x:Name="dtgListadoVendedores" ItemsSource="{Binding Path=usuarios}"  Margin="0,44,0,10" IsEnabled="False" />
+        <Button x:Name="salir" Content="Salir" HorizontalAlignment="Left" Margin="297,10,0,0" VerticalAlignment="Top" Width="75" Background="#FFD6E0CB"/>
 
     </Grid>
 </Window>

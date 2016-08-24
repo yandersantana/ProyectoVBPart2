@@ -2,19 +2,20 @@
 Imports System.Data.OleDb
 
 Public Class winListaVendedores
-    Private dbPath = "C:ruta"
-    Private strConexion = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=" & dbPath
+    Private dbPath = "..\..\dataBaseVisual.mdb"
+    Private strConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & dbPath
     Private dsVendedores As DataSet
     Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
         Using dbConexion As New OleDbConnection(strConexion)
-            Dim consulta As String = "SELECT * FROM tbl_vendedores"
-            Dim AdVendedores As New OleDbDataAdapter(New OleDbCommand(consulta, strConexion))
+            Dim consulta As String = "SELECT * FROM usuarios"
+            Dim AdVendedores As New OleDbDataAdapter(New OleDbCommand(consulta, dbConexion))
 
             Dim dsLisVendedores = New DataSet("Vendedores")
-            AdVendedores.Fill(dsLisVendedores, "LstVendedores")
+            AdVendedores.Fill(dsLisVendedores, "usuarios")
             dtgListadoVendedores.DataContext = dsLisVendedores
 
         End Using
+
     End Sub
 
     Private Sub dtgListadoVendedores_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles dtgListadoVendedores.SelectionChanged
@@ -27,5 +28,9 @@ Public Class winListaVendedores
         Me.Hide()
 
 
+    End Sub
+
+    Private Sub salir_Click(sender As Object, e As RoutedEventArgs) Handles salir.Click
+        Me.Close()
     End Sub
 End Class

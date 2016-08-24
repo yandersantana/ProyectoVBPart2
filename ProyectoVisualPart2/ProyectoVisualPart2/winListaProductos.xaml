@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="winListaProductos" Height="289.157" Width="485.542" Loaded="Window_Loaded">
     <Grid x:Name="s">
-        <DataGrid x:Name="dtgProducto" ItemsSource="{Binding Path=producto}" HorizontalAlignment="Left" Height="214" VerticalAlignment="Top" Width="478" Margin="0,39,0,0"/>
+        <DataGrid x:Name="dtgProducto" ItemsSource="{Binding Path=producto}" HorizontalAlignment="Left" Height="214" VerticalAlignment="Top" Width="478" Margin="0,39,0,0" IsEnabled="False"/>
         <Button x:Name="salir" Content="Salir" HorizontalAlignment="Left" Margin="306,4,0,0" VerticalAlignment="Top" Width="99" Height="30" Background="#FFDCECD1"/>
 
 
