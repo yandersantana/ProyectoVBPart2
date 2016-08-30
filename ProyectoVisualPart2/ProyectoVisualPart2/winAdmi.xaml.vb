@@ -29,7 +29,8 @@
         winNewl.Show()
     End Sub
 
-    Private Sub winAdmi1_Closing(sender As Object, e As ComponentModel.CancelEventArgs) Handles MyBase1.Closing, MyBase1.Closing
+    Private Sub cerrar_Click(sender As Object, e As RoutedEventArgs) Handles cerrar.Click
+        Me.Close()
         Me.Owner.Show()
     End Sub
 End Class

@@ -5,17 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoVisualPart2"
         mc:Ignorable="d"
-        Title="winAdmi" Height="328.409" Width="712.499">
+        Title="winAdmi" Height="328.409" Width="787.137">
     <Grid>
-        <Menu x:Name="menu" HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="672">
-            <MenuItem x:Name="registrar_vendedor" Background="#FFCEDED6" Header="Registrar Vendedor"/>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="769">
+            <MenuItem x:Name="registrar_vendedor" Background="#FFCEDED6" Header="Registrar Vendedor" Height="42"/>
             <MenuItem x:Name="añadir_Producto" Background="#FFD4E2DE" Header="Añadir Producto"/>
             <MenuItem x:Name="listar_Vendedores" Background="#FFD4E2DE" Header="Listar Vendedores"/>
             <MenuItem x:Name="listar_Producto" Background="#FFD4E2DE" Header="Listar Productos"/>
             <MenuItem x:Name="buscar_Facturas" Background="#FFD4E2DE" Header="Buscar Facturas"/>
-            <MenuItem x:Name="inventario" Background="#FF9DFFF2" Header="Inventario"/>
-            <MenuItem Background="#FF80DEDE" Header="Ayuda "/>
-            <MenuItem Background="#FF66BFF1" Header="Cerrar Sesión"/>
+            <MenuItem x:Name="inventario" Background="#FFFF9F4F" Header="Inventario">
+                <MenuItem Background="#FF0A0000" Foreground="Snow" Header="Total Ventas"/>
+                <MenuItem Background="Black" Foreground="White" Header="Lugar de Mayor demanda"/>
+                <MenuItem Background="Black" Foreground="White" Header="Mejores Clientes"/>
+                <MenuItem Header="Mejores Vendedores"/>
+            </MenuItem>
+            <MenuItem Background="#FF80DEDE" Header="Ayuda " Width="58"/>
+            <Button x:Name="cerrar" Background="#FF110202" Content="Cerrar Sesión" Foreground="White" Height="43" Width="92"/>
         </Menu>
 
     </Grid>

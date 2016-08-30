@@ -35,7 +35,7 @@ Class WinPrincipalL
                 cmd.CommandText = "SELECT administrador FROM usuarios WHERE Usuario=txtUsuario.Text"
                 Dim risul As Boolean = cmd.ExecuteScalar
                 If (risul) Then
-                    Dim winAd As New winAdministrador
+                    Dim winAd As New winAdmi
                     winAd.Owner = Me
                     winAd.Show()
                     Me.Hide()
