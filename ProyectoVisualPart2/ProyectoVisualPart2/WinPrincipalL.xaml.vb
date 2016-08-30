@@ -1,13 +1,15 @@
 ﻿Imports System.Data.OleDb
 
 Class WinPrincipalL
+    Private user As String
     Public loggedIn As Boolean
     Public usuarios As ArrayList
     Private strPath = "..\..\dataBaseVisual.mdb"
     'Private strConexion As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & strPath
     Private strConexion As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & strPath
-    Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
+    Public persona As New Persona
 
+    Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
 
 
 
@@ -34,8 +36,13 @@ Class WinPrincipalL
 
                 cmd.CommandText = "SELECT administrador FROM usuarios WHERE Usuario=txtUsuario.Text"
                 Dim risul As Boolean = cmd.ExecuteScalar
+
                 If (risul) Then
-                    Dim winAd As New winAdmi
+
+                    persona.Nombre = txtUsuario.Text
+
+                    Dim winAd As New winAdmi()
+                    winAd.persona = persona
                     winAd.Owner = Me
                     winAd.Show()
                     Me.Hide()
