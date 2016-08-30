@@ -61,8 +61,7 @@ Public Class winAdmi
                     txtApellido.Text = em(2)
                     txtEdad.Text = em(3)
                     txtCorreo.Text = em(4)
-                    'foto_log.
-
+                    'foto.Source = Image.f
 
                 End If
 

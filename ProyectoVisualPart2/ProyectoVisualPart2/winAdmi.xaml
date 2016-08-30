@@ -23,7 +23,6 @@
             <MenuItem Background="#FF80DEDE" Header="Ayuda " Width="58"/>
             <Button x:Name="cerrar" Background="#FF110202" Content="Cerrar Sesión" Foreground="White" Height="43" Width="92"/>
         </Menu>
-        <Image x:Name="foto_log" HorizontalAlignment="Left" Height="192" Margin="40,66,0,0" VerticalAlignment="Top" Width="213" IsEnabled="False"/>
         <Label x:Name="label" Content="Nombre" HorizontalAlignment="Left" Margin="289,144,0,0" VerticalAlignment="Top" Width="82"/>
         <Label x:Name="label_Copy" Content="Apellido" HorizontalAlignment="Left" Margin="289,170,0,0" VerticalAlignment="Top" Width="82"/>
         <Label x:Name="label_Copy1" Content="Edad" HorizontalAlignment="Left" Margin="289,201,0,0" VerticalAlignment="Top" Width="82"/>
@@ -33,6 +32,7 @@
         <TextBox x:Name="txtEdad" HorizontalAlignment="Left" Height="23" Margin="484,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Height="23" Margin="484,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <Label x:Name="label1" Content="Datos Personales" HorizontalAlignment="Left" Margin="338,66,0,0" VerticalAlignment="Top" Width="197" Height="57" FontSize="24" FontFamily="Source Sans Pro Black" Foreground="#FF54C109" Background="{x:Null}"/>
+        <Image x:Name="foto" HorizontalAlignment="Left" Height="185" Margin="29,70,0,0" VerticalAlignment="Top" Width="209"/>
 
     </Grid>
 </Window>
