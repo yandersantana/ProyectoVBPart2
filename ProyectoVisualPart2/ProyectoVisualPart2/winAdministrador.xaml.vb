@@ -33,4 +33,10 @@
         winNewlv.Show()
 
     End Sub
+
+    Private Sub btnBuscarFact_Click(sender As Object, e As RoutedEventArgs) Handles btnBuscarFact.Click
+        Dim winNewl As New winListaFacturas
+        winNewl.Owner = Me
+        winNewl.Show()
+    End Sub
 End Class

@@ -1,0 +1,22 @@
+﻿<Window x:Name="winAdmi1" x:Class="winAdmi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoVisualPart2"
+        mc:Ignorable="d"
+        Title="winAdmi" Height="328.409" Width="712.499">
+    <Grid>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="18" VerticalAlignment="Top" Width="672">
+            <MenuItem x:Name="registrar_vendedor" Background="#FFCEDED6" Header="Registrar Vendedor"/>
+            <MenuItem x:Name="añadir_Producto" Background="#FFD4E2DE" Header="Añadir Producto"/>
+            <MenuItem x:Name="listar_Vendedores" Background="#FFD4E2DE" Header="Listar Vendedores"/>
+            <MenuItem x:Name="listar_Producto" Background="#FFD4E2DE" Header="Listar Productos"/>
+            <MenuItem x:Name="buscar_Facturas" Background="#FFD4E2DE" Header="Buscar Facturas"/>
+            <MenuItem x:Name="inventario" Background="#FF9DFFF2" Header="Inventario"/>
+            <MenuItem Background="#FF80DEDE" Header="Ayuda "/>
+            <MenuItem Background="#FF66BFF1" Header="Cerrar Sesión"/>
+        </Menu>
+
+    </Grid>
+</Window>

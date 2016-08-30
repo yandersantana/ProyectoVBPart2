@@ -19,11 +19,13 @@ Public Class winListaVendedores
     End Sub
 
     Private Sub dtgListadoVendedores_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles dtgListadoVendedores.SelectionChanged
-        Dim fila As DataRow = sender.selectedItem
+        ' Dim fila As DataRow = sender.selectedItem
         Dim newvendedor As New winNewVendedor
         newvendedor.Owner = Me
-        Dim unVendedor As New Vendedor(fila(0), fila(1), fila(2), fila(3), fila(4), fila(5), fila(6), fila(7), fila(8), fila(9), fila(10), fila(11))
-        newvendedor.DataContext = unVendedor
+        'Dim unVendedor As New Vendedor(fila(0), fila(1), fila(2), fila(3), fila(4), fila(5), fila(6), fila(7), fila(8), fila(9), fila(10), fila(11))
+        'newvendedor.DataContext = unVendedor
+        newvendedor.IsEnabled = False
+
         newvendedor.Show()
         Me.Hide()
 
@@ -33,4 +35,6 @@ Public Class winListaVendedores
     Private Sub salir_Click(sender As Object, e As RoutedEventArgs) Handles salir.Click
         Me.Close()
     End Sub
+
+
 End Class

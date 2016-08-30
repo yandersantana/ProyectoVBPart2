@@ -18,6 +18,19 @@ Public Class winListaProductos
         Console.ReadLine()
 
     End Sub
+    Private Sub dtgProducto_SelectionChanged(sender As Object, e As SelectionChangedEventArgs) Handles dtgProducto.SelectionChanged
+        ' Dim fila As DataRow = sender.selectedItem
+        Dim pro As New WinAggProducto
+        pro.Owner = Me
+        'Dim unVendedor As New Vendedor(fila(0), fila(1), fila(2), fila(3), fila(4), fila(5), fila(6), fila(7), fila(8), fila(9), fila(10), fila(11))
+        'newvendedor.DataContext = unVendedor
+        pro.IsEnabled = False
+
+        pro.Show()
+        Me.Hide()
+
+
+    End Sub
 
     Private Sub salir_Click(sender As Object, e As RoutedEventArgs) Handles salir.Click
         Me.Close()

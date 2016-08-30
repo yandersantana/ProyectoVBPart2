@@ -1,0 +1,16 @@
+﻿<Window x:Class="winListaFacturas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoVisualPart2"
+        mc:Ignorable="d"
+        Title="winListaFacturas" Height="314" Width="300">
+    <Grid Margin="0,0,-24,123">
+        <Label x:Name="label" Content="codigo" HorizontalAlignment="Left" Margin="20,32,0,0" VerticalAlignment="Top" Width="57"/>
+        <TextBox x:Name="codigoBuscar" HorizontalAlignment="Left" Height="23" Margin="153,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.608,1.261"/>
+        <Button x:Name="buscar" Content="Buscar" HorizontalAlignment="Left" Height="37" Margin="112,207,0,-89" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="limpiar" Content="borrar" HorizontalAlignment="Left" Height="37" Margin="112,108,0,0" VerticalAlignment="Top" Width="75" Background="#FFFDC8C8"/>
+
+    </Grid>
+</Window>
