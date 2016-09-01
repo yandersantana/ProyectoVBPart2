@@ -1,6 +1,8 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
-
+Imports System.Data.SqlClient
+Imports System.IO
+Imports System.Drawing.Imaging
 
 Public Class winAdmi
     Private strPath = "..\..\dataBaseVisual.mdb"
@@ -61,7 +63,7 @@ Public Class winAdmi
                     txtApellido.Text = em(2)
                     txtEdad.Text = em(3)
                     txtCorreo.Text = em(4)
-                    'foto.Source = Image.f
+
 
                 End If
 

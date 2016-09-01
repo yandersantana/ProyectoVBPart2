@@ -32,7 +32,7 @@
         <TextBox x:Name="txtEdad" HorizontalAlignment="Left" Height="23" Margin="484,201,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Height="23" Margin="484,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False"/>
         <Label x:Name="label1" Content="Datos Personales" HorizontalAlignment="Left" Margin="338,66,0,0" VerticalAlignment="Top" Width="197" Height="57" FontSize="24" FontFamily="Source Sans Pro Black" Foreground="#FF54C109" Background="{x:Null}"/>
-        <Image x:Name="foto" HorizontalAlignment="Left" Height="185" Margin="29,70,0,0" VerticalAlignment="Top" Width="209"/>
+        <Image x:Name="ima" HorizontalAlignment="Left" Height="177" Margin="24,81,0,0" VerticalAlignment="Top" Width="212"/>
 
     </Grid>
 </Window>
