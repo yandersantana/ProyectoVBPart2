@@ -47,7 +47,7 @@ Class WinPrincipalL
                     winAd.Show()
                     Me.Hide()
                 Else
-                    Dim winvendedor As New winFactura
+                    Dim winvendedor As New winVendedor
                     winvendedor.Owner = Me
                     winvendedor.Show()
                     Me.Hide()

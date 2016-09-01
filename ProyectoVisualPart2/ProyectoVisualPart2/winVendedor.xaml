@@ -5,14 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoVisualPart2"
         mc:Ignorable="d"
-        Title="winVendedor" Height="367.901" Width="639.506">
-    <Grid Margin="0,0,0,-1" Background="#FF92EAD6">
-        <Label x:Name="lblBienv" Content="Bienvenido" HorizontalAlignment="Left" Margin="185,20,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.166,2.419" FontFamily="Ravie" FontSize="24"/>
-        <Label x:Name="label_Copy" Content="A continuacion escoga una de las opciones a realizar" HorizontalAlignment="Left" Margin="223,67,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.166,2.419" FontFamily="Pristina" FontSize="22"/>
-        <Button x:Name="btnNewVendedor" Content="Nueva Factura" HorizontalAlignment="Left" Margin="299,128,0,0" VerticalAlignment="Top" Width="237" BorderBrush="#FF63E263" Background="#FF83EC83" Height="36" FontFamily="Script MT Bold" FontSize="16"/>
-        <Button x:Name="btnNewProducto" Content="Buscar Factura" HorizontalAlignment="Left" Margin="299,193,0,0" VerticalAlignment="Top" Width="237" BorderBrush="#FF63E263" Background="#FF83EC83" Height="34" FontFamily="Script MT Bold" FontSize="16"/>
-        <Button x:Name="btnListaVendedores" Content="Buscar cliente" HorizontalAlignment="Left" Margin="299,253,0,0" VerticalAlignment="Top" Width="237" BorderBrush="#FF63E263" Background="#FF83EC83" Height="36" FontFamily="Script MT Bold" FontSize="16"/>
-        <Label x:Name="label1" Content="Aqui ira una imagen del administrador" HorizontalAlignment="Left" Height="200" Margin="40,111,0,0" VerticalAlignment="Top" Width="195" Background="#FFB6ADAD"/>
-
+        Title="winVendedor" Height="256" Width="575">
+    <Grid Margin="0,0,77,319">
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="38" VerticalAlignment="Top" Width="563" Margin="0,0,-73,-38" Background="#FF746F6F">
+            <MenuItem x:Name="newFac" Background="#FF1B0303" Foreground="#FFFFF7F7" Header="Nueva Factura" Height="38"/>
+            <MenuItem Background="Black" Foreground="White" Header="Buscar Factura"/>
+            <MenuItem Background="Black" Foreground="White" Header="Buscar Cliente"/>
+            <Separator Background="#FF727272" Foreground="#FF230404" Width="200"/>
+            <MenuItem Background="Black" Foreground="White" Header="Cerrar Sesion" Click="MenuItem_Click"/>
+        </Menu>
+        <Label x:Name="label" Content="Nombre" HorizontalAlignment="Left" Margin="246,90,0,-126" VerticalAlignment="Top" Width="72" Height="36"/>
+        <Label x:Name="label_Copy" Content="Apellido" HorizontalAlignment="Left" Margin="246,126,0,-154" VerticalAlignment="Top" Width="72" Height="28"/>
+        <Label x:Name="label_Copy1" Content="Edad" HorizontalAlignment="Left" Margin="246,160,0,-193" VerticalAlignment="Top" Width="72" Height="33"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="30" Margin="416,90,-31,-120" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" IsEnabled="False" RenderTransformOrigin="0.543,1.8"/>
+        <TextBox x:Name="txtApellido" HorizontalAlignment="Left" Height="28" Margin="416,125,-31,-153" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" IsEnabled="False"/>
+        <TextBox x:Name="txtEdad" HorizontalAlignment="Left" Height="33" Margin="416,160,-31,-193" TextWrapping="Wrap" VerticalAlignment="Top" Width="105" IsEnabled="False"/>
+        <Label x:Name="label1" Content="Datos Personales" HorizontalAlignment="Left" Margin="246,40,0,-90" VerticalAlignment="Top" Width="215" Height="50" FontSize="24" FontFamily="Source Sans Pro Black" Foreground="#FF54C109" Background="{x:Null}"/>
+        <Image x:Name="ima" HorizontalAlignment="Left" Height="154" Margin="15,54,0,-208" VerticalAlignment="Top" Width="185"/>
     </Grid>
 </Window>
