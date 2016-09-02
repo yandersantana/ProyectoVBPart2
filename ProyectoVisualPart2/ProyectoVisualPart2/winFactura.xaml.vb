@@ -106,6 +106,11 @@ Public Class winFactura
             End Using
             If Not existe Then
                 MessageBox.Show("Cliente no Existe")
+                txtNombre.Text = ""
+                txtCedula.Text = ""
+                txtTelefono.Text = ""
+                texDireccion.Text = ""
+
                 txtNombre.IsEnabled = "true"
                 txtCedula.IsEnabled = "true"
                 txtTelefono.IsEnabled = "true"
