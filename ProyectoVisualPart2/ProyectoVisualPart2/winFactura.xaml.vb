@@ -1,11 +1,14 @@
 ﻿Imports System.Data
 Imports System.Data.OleDb
+Imports System.IO
+Imports System.Net.WebRequestMethods
 
 Public Class winFactura
     Private strPath = "..\..\dataBaseVisual.mdb"
     'Private strConexion As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & strPath
     Private strConexion As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & strPath
-    Private listaProducto As ArrayList
+
+    Private listaProducto As New ArrayList
     Public result As Double
 
     Private Sub salir_Click(sender As Object, e As RoutedEventArgs) Handles salir.Click
@@ -36,7 +39,7 @@ Public Class winFactura
                     If (em(0) = result) Then
                         nombreProducto.Text = em(1)
                         pUnitario.Text = em(2)
-                        iva.Text = em(3)
+                        registraIva.Text = em(3)
                         existe = True
 
                         Exit For
@@ -55,14 +58,17 @@ Public Class winFactura
         Dim produc As New Producto()
         produc.NombreProducto = nombreProducto.Text
         produc.Codigo = Convert.ToString(result)
-        produc.RegistraIva = iva.Text
-        produc.PrecioUnitario = pUnitario.Text
-        listaProducto.Add(produc)
 
+        produc.RegistraIva = registraIva.Text
+        produc.PrecioUnitario = Convert.ToDouble(pUnitario.Text)
+        produc.Cantidad = Convert.ToInt16(cantid.Text)
+        produc.TotalPro = produc.Cantidad * produc.PrecioUnitario
+        listaProducto.Add(produc)
 
     End Sub
 
     Private Sub factura_Loaded(sender As Object, e As RoutedEventArgs) Handles factura.Loaded
+
 
 
 
