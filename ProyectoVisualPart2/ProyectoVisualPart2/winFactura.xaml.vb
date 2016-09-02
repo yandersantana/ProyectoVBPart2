@@ -7,7 +7,7 @@ Public Class winFactura
     Private strPath = "..\..\dataBaseVisual.mdb"
     'Private strConexion As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & strPath
     Private strConexion As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & strPath
-
+    Public existe As Boolean = False
     Private listaProducto As New ArrayList
     Public result As Double
 
@@ -73,49 +73,29 @@ Public Class winFactura
         txtTelefono.IsEnabled = "False"
         texDireccion.IsEnabled = "False"
         guardarCliente.IsEnabled = "False"
-
+           txtApellido.IsEnabled = "false"
 
 
     End Sub
 
     Private Sub txtCodigo_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCodigo.KeyDown
         If e.Key = Key.Enter Then
+            txtNombre.Text = ""
+            txtCedula.Text = ""
+            txtTelefono.Text = ""
+            texDireccion.Text = ""
+            txtApellido.Text = ""
+            Me.validarExistencia()
 
-            Dim existe As Boolean = False
-            result = Convert.ToDouble(txtCodigo.Text)
-            Using dbConexion As New OleDbConnection(strConexion) 'entrar y salir de la base
-                Dim strQuery As String = "SELECT * FROM cliente"
-                Dim dbAdapter As New OleDbDataAdapter(strQuery, strConexion)
-                Dim dsMaster As New DataSet("Datos")
-                dbAdapter.Fill(dsMaster, "Cliente")
-
-                For Each em As DataRow In dsMaster.Tables("Cliente").Rows
-                    If (em(0) = result) Then
-                        txtNombre.Text = em(1)
-                        txtApellido.Text = em(2)
-                        txtCedula.Text = em(3)
-                        txtTelefono.Text = em(4)
-                        texDireccion.Text = em(5)
-                        existe = True
-
-                        Exit For
-                    End If
-
-                Next
-
-            End Using
             If Not existe Then
                 MessageBox.Show("Cliente no Existe")
                 txtNombre.Text = ""
                 txtCedula.Text = ""
                 txtTelefono.Text = ""
                 texDireccion.Text = ""
+                txtApellido.Text = ""
 
-                txtNombre.IsEnabled = "true"
-                txtCedula.IsEnabled = "true"
-                txtTelefono.IsEnabled = "true"
-                texDireccion.IsEnabled = "true"
-                guardarCliente.IsEnabled = "true"
+
             End If
         End If
     End Sub
@@ -126,25 +106,73 @@ Public Class winFactura
 
 
         Else
-            Using conexion As New OleDbConnection(strConexion)
-                conexion.Open()
-                Dim Insertar As String
-                Insertar = "INSERT INTO usuarios ([Nombre], [Telefono], [Cedula], [Direccion]) values ( txtNombre.Text,
+            Me.validarExistencia()
+            If (existe) Then
+                MessageBox.Show("Cliente ya existe asigne otro código")
+            Else
+                Using conexion As New OleDbConnection(strConexion)
+                    conexion.Open()
+                    Dim Insertar As String
+                    Insertar = "INSERT INTO usuarios ([Id],[Nombre], [Apellido], [Telefono], [Cedula], [Contacto]) values ( txtCodigo.Text,txtNombre.Text,
             txtApellido.Text,txtTelefono.Text,txtCedula.Text,texDireccion.Text)"
-                Dim cmd As OleDbCommand = New OleDbCommand(Insertar, conexion)
-                ' cmd.Parameters.Add(New OleDbParameter("Id", CType(txtId.Text, String)))
-                cmd.Parameters.Add(New OleDbParameter("Nombre", CType(txtNombre.Text, String)))
-                cmd.Parameters.Add(New OleDbParameter("Apellido", CType(txtApellido.Text, String)))
-                cmd.Parameters.Add(New OleDbParameter("Telefono", CType(txtTelefono.Text, String)))
-                cmd.Parameters.Add(New OleDbParameter("Cedula", CType(txtCedula.Text, String)))
-                cmd.Parameters.Add(New OleDbParameter("Direccion", CType(texDireccion.Text, String)))
+                    Dim cmd As OleDbCommand = New OleDbCommand(Insertar, conexion)
+                    cmd.Parameters.Add(New OleDbParameter("Id", CType(txtCodigo.Text, String)))
+                    cmd.Parameters.Add(New OleDbParameter("Nombre", CType(txtNombre.Text, String)))
+                    cmd.Parameters.Add(New OleDbParameter("Apellido", CType(txtApellido.Text, String)))
+                    cmd.Parameters.Add(New OleDbParameter("Telefono", CType(txtTelefono.Text, String)))
+                    cmd.Parameters.Add(New OleDbParameter("Cedula", CType(txtCedula.Text, String)))
+                    cmd.Parameters.Add(New OleDbParameter("Contacto", CType(texDireccion.Text, String)))
 
-                cmd.ExecuteNonQuery()
-
-
+                    cmd.ExecuteNonQuery()
 
 
-            End Using
+
+
+                End Using
+            End If
+
+
+
+
+
         End If
+
+    End Sub
+    Public Sub validarExistencia()
+
+        result = Convert.ToDouble(txtCodigo.Text)
+        Using dbConexion As New OleDbConnection(strConexion) 'entrar y salir de la base
+            Dim strQuery As String = "SELECT * FROM cliente"
+            Dim dbAdapter As New OleDbDataAdapter(strQuery, strConexion)
+            Dim dsMaster As New DataSet("Datos")
+            dbAdapter.Fill(dsMaster, "Cliente")
+
+            For Each em As DataRow In dsMaster.Tables("Cliente").Rows
+                If (em(0) = result) Then
+                    txtNombre.Text = em(1)
+                    txtApellido.Text = em(2)
+                    txtCedula.Text = em(3)
+                    txtTelefono.Text = em(4)
+                    texDireccion.Text = em(5)
+                    existe = True
+                    txtNombre.IsEnabled = "False"
+                    txtCedula.IsEnabled = "False"
+                    txtTelefono.IsEnabled = "False"
+                    texDireccion.IsEnabled = "False"
+                    guardarCliente.IsEnabled = "False"
+                    txtApellido.IsEnabled = "false"
+                    Exit For
+                Else
+                    txtNombre.IsEnabled = "true"
+                    txtApellido.IsEnabled = "true"
+                    txtCedula.IsEnabled = "true"
+                    txtTelefono.IsEnabled = "true"
+                    texDireccion.IsEnabled = "true"
+                    guardarCliente.IsEnabled = "true"
+                End If
+
+            Next
+
+        End Using
     End Sub
 End Class
