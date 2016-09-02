@@ -68,10 +68,78 @@ Public Class winFactura
     End Sub
 
     Private Sub factura_Loaded(sender As Object, e As RoutedEventArgs) Handles factura.Loaded
+        txtNombre.IsEnabled = "False"
+        txtCedula.IsEnabled = "False"
+        txtTelefono.IsEnabled = "False"
+        texDireccion.IsEnabled = "False"
+        guardarCliente.IsEnabled = "False"
+
+
+
+    End Sub
+
+    Private Sub txtCodigo_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCodigo.KeyDown
+        If e.Key = Key.Enter Then
+
+            Dim existe As Boolean = False
+            result = Convert.ToDouble(txtCodigo.Text)
+            Using dbConexion As New OleDbConnection(strConexion) 'entrar y salir de la base
+                Dim strQuery As String = "SELECT * FROM cliente"
+                Dim dbAdapter As New OleDbDataAdapter(strQuery, strConexion)
+                Dim dsMaster As New DataSet("Datos")
+                dbAdapter.Fill(dsMaster, "Cliente")
+
+                For Each em As DataRow In dsMaster.Tables("Cliente").Rows
+                    If (em(0) = result) Then
+                        txtNombre.Text = em(1)
+                        txtApellido.Text = em(2)
+                        txtCedula.Text = em(3)
+                        txtTelefono.Text = em(4)
+                        texDireccion.Text = em(5)
+                        existe = True
+
+                        Exit For
+                    End If
+
+                Next
+
+            End Using
+            If Not existe Then
+                MessageBox.Show("Cliente no Existe")
+                txtNombre.IsEnabled = "true"
+                txtCedula.IsEnabled = "true"
+                txtTelefono.IsEnabled = "true"
+                texDireccion.IsEnabled = "true"
+                guardarCliente.IsEnabled = "true"
+            End If
+        End If
+    End Sub
+
+    Private Sub guardarCliente_Click(sender As Object, e As RoutedEventArgs) Handles guardarCliente.Click
+        If (txtCodigo.Text = "" And txtNombre.Text = "" And txtApellido.Text = "") Then
+            MessageBox.Show("Campos Vacios")
+
+
+        Else
+            Using conexion As New OleDbConnection(strConexion)
+                conexion.Open()
+                Dim Insertar As String
+                Insertar = "INSERT INTO usuarios ([Nombre], [Telefono], [Cedula], [Direccion]) values ( txtNombre.Text,
+            txtApellido.Text,txtTelefono.Text,txtCedula.Text,texDireccion.Text)"
+                Dim cmd As OleDbCommand = New OleDbCommand(Insertar, conexion)
+                ' cmd.Parameters.Add(New OleDbParameter("Id", CType(txtId.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Nombre", CType(txtNombre.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Apellido", CType(txtApellido.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Telefono", CType(txtTelefono.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Cedula", CType(txtCedula.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Direccion", CType(texDireccion.Text, String)))
+
+                cmd.ExecuteNonQuery()
 
 
 
 
-
+            End Using
+        End If
     End Sub
 End Class
