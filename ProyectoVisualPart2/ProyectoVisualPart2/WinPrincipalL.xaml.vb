@@ -42,7 +42,7 @@ Class WinPrincipalL
                     persona.Nombre = txtUsuario.Text
 
                     Dim winAd As New winAdmi()
-                    winAd.persona = persona
+                    winAd.persona.Nombre = persona.Nombre
                     winAd.Owner = Me
                     winAd.Show()
                     Me.Hide()

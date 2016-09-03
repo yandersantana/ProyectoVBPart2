@@ -8,7 +8,7 @@ Public Class winAdmi
     Private strPath = "..\..\dataBaseVisual.mdb"
     'Private strConexion As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & strPath
     Private strConexion As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & strPath
-    Public persona As Persona
+    Public persona As New Persona
 
 
 
@@ -58,7 +58,7 @@ Public Class winAdmi
             dbAdapter.Fill(dsMaster, "Empleado")
 
             For Each em As DataRow In dsMaster.Tables("Empleado").Rows
-                If (em(8) = persona.Nombre) Then
+                If (em(8).ToString = persona.Nombre) Then
                     txtNombre.Text = em(1)
                     txtApellido.Text = em(2)
                     txtEdad.Text = em(3)

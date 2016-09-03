@@ -113,7 +113,7 @@ Public Class winFactura
                 Using conexion As New OleDbConnection(strConexion)
                     conexion.Open()
                     Dim Insertar As String
-                    Insertar = "INSERT INTO usuarios ([Id],[Nombre], [Apellido], [Telefono], [Cedula], [Contacto]) values ( txtCodigo.Text,txtNombre.Text,
+                    Insertar = "INSERT INTO cliente ([Id],[Nombre], [Apellido], [Telefono], [Cedula], [Contacto]) values ( txtCodigo.Text,txtNombre.Text,
             txtApellido.Text,txtTelefono.Text,txtCedula.Text,texDireccion.Text)"
                     Dim cmd As OleDbCommand = New OleDbCommand(Insertar, conexion)
                     cmd.Parameters.Add(New OleDbParameter("Id", CType(txtCodigo.Text, String)))
