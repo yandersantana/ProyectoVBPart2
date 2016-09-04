@@ -68,10 +68,11 @@
     End Sub
 
 
-    Sub New(codigo As String, nombreProducto As String, precioUnitario As Double, registraIva As Boolean)
+    Public Sub New(codigo As String, nombreProducto As String, precioUnitario As Double, registraIva As Boolean)
         Me.Codigo = codigo
         Me.NombreProducto = nombreProducto
         Me.PrecioUnitario = precioUnitario
+        Me.RegistraIva = registraIva
 
     End Sub
 

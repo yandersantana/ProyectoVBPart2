@@ -5,16 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoVisualPart2"
         mc:Ignorable="d"
-        Title="WinAggProducto" Height="300" Width="300">
+        Title="WinAggProducto" Height="300" Width="427.711" Loaded="Window_Loaded">
     <Grid>
-        <Label x:Name="label" Content="Nombre" HorizontalAlignment="Left" Margin="31,40,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,0.231"/>
-        <Label x:Name="label1" Content="Precio Unitario" HorizontalAlignment="Left" Margin="31,83,0,0" VerticalAlignment="Top" Width="96"/>
-        <Label x:Name="label2" Content="Iva" HorizontalAlignment="Left" Margin="44,142,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.4,0.462"/>
-        <TextBox x:Name="textNombreProducto" HorizontalAlignment="Left" Height="23" Margin="162,43,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtPrecioUnitario" HorizontalAlignment="Left" Height="23" Margin="215,92,0,0" TextWrapping="Wrap" Text="&#xD;&#xA;" VerticalAlignment="Top" Width="67"/>
-        <CheckBox x:Name="IvaSI" Content="True" HorizontalAlignment="Left" Margin="226,148,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="aceptar" Content="Aceptar" HorizontalAlignment="Left" Margin="44,215,0,0" VerticalAlignment="Top" Width="75" Background="#FFC2EC67"/>
-        <Button x:Name="cancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="181,215,0,0" VerticalAlignment="Top" Width="75" Background="#FFC2EC67"/>
+        <Label x:Name="label" Content="Nombre Producto" HorizontalAlignment="Left" Margin="31,66,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,0.231"/>
+        <Label x:Name="label1" Content="Precio Unitario" HorizontalAlignment="Left" Margin="31,97,0,0" VerticalAlignment="Top" Width="96"/>
+        <Label x:Name="label2" Content="Iva" HorizontalAlignment="Left" Margin="44,137,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.4,0.462"/>
+        <TextBox x:Name="textNombreProducto" Text="{Binding NombreProducto}" HorizontalAlignment="Left" Height="23" Margin="163,66,0,0"  VerticalAlignment="Top" Width="215"/>
+        <TextBox x:Name="txtPrecioUnitario" Text="{Binding PrecioUnitario}" HorizontalAlignment="Left" Height="23" Margin="277,99,0,0"   VerticalAlignment="Top" Width="101"/>
+        <CheckBox x:Name="IvaSI" Content="True" HorizontalAlignment="Left" Margin="328,143,0,0" VerticalAlignment="Top" Width="50"/>
+        <Button x:Name="btnNuevo" Content="Registrar Nuevo" HorizontalAlignment="Left" Margin="162,205,0,0" VerticalAlignment="Top" Width="106" Background="#FFC2EC67" Height="30"/>
+        <Button x:Name="cancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="283,205,0,0" VerticalAlignment="Top" Width="95" Background="#FFC2EC67" Height="30"/>
+        <Label x:Name="label_Copy" Content="Codigo" HorizontalAlignment="Left" Margin="31,35,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.316,0.231"/>
+        <TextBox x:Name="txtCodigo" Text="{Binding Codigo}" HorizontalAlignment="Left" Height="23" Margin="236,35,0,0"  VerticalAlignment="Top" Width="142"/>
+        <Button x:Name="btn_actualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="39,205,0,0" VerticalAlignment="Top" Width="106" Background="#FFC2EC67" Height="30"/>
 
     </Grid>
 </Window>

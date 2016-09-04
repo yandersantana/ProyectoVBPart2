@@ -5,8 +5,8 @@ Class WinPrincipalL
     Public loggedIn As Boolean
     Public usuarios As ArrayList
     Private strPath = "..\..\dataBaseVisual.mdb"
-    'Private strConexion As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & strPath
-    Private strConexion As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & strPath
+    Private strConexion As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & strPath
+    'Private strConexion As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & strPath
     Public persona As New Persona
 
     Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
