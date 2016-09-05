@@ -47,7 +47,9 @@ Class WinPrincipalL
                     winAd.Show()
                     Me.Hide()
                 Else
+                    persona.Nombre = txtUsuario.Text
                     Dim winvendedor As New winVendedor
+                    winvendedor.persona2.Nombre = persona.Nombre
                     winvendedor.Owner = Me
                     winvendedor.Show()
                     Me.Hide()

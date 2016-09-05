@@ -1,11 +1,11 @@
-﻿<Window x:Class="winVendedor"
+﻿<Window x:Name="winVendedor" x:Class="winVendedor"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoVisualPart2"
         mc:Ignorable="d"
-        Title="winVendedor" Height="256" Width="575">
+        Title="winVendedor" Height="256" Width="643">
     <Grid Margin="0,0,77,319">
         <Menu x:Name="menu" HorizontalAlignment="Left" Height="38" VerticalAlignment="Top" Width="563" Margin="0,0,-73,-38" Background="#FF746F6F">
             <MenuItem x:Name="newFac" Background="#FF1B0303" Foreground="#FFFFF7F7" Header="Nueva Factura" Height="38"/>
