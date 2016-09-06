@@ -5,11 +5,15 @@ Imports System.Net.WebRequestMethods
 
 Public Class winFactura
     Private strPath = "..\..\dataBaseVisual.mdb"
-    'Private strConexion As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & strPath
-    Private strConexion As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & strPath
+    Private strConexion As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & strPath
+    'Private strConexion As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & strPath
     Public existe As Boolean = False
     Private listaProducto As New ArrayList
     Public result As Double
+    Dim dt As New DataTable
+    Dim dr As DataRow
+    Dim dcCodido As New DataColumn("Codigo", GetType(System.Int16))
+    Dim dcnombre As New DataColumn("Nombre", GetType(System.String))
 
     Private Sub salir_Click(sender As Object, e As RoutedEventArgs) Handles salir.Click
         Me.Close()
@@ -55,25 +59,53 @@ Public Class winFactura
     End Sub
 
     Private Sub agregar_Click(sender As Object, e As RoutedEventArgs) Handles agregar.Click
-        Dim produc As New Producto()
-        produc.NombreProducto = nombreProducto.Text
-        produc.Codigo = Convert.ToString(result)
+        'Dim produc As New Producto()
+        'produc.NombreProducto = nombreProducto.Text
+        'produc.Codigo = Convert.ToString(result)
 
-        produc.RegistraIva = registraIva.Text
-        produc.PrecioUnitario = Convert.ToDouble(pUnitario.Text)
-        produc.Cantidad = Convert.ToInt16(cantid.Text)
-        produc.TotalPro = produc.Cantidad * produc.PrecioUnitario
-        listaProducto.Add(produc)
+        'produc.RegistraIva = registraIva.Text
+        'produc.PrecioUnitario = Convert.ToDouble(pUnitario.Text)
+        'produc.Cantidad = Convert.ToInt16(cantid.Text)
+        'produc.TotalPro = produc.Cantidad * produc.PrecioUnitario
+        'listaProducto.Add(produc)
+        'Dim dt As New DataTable
+        'Dim dr As DataRow
+        'Dim dcCodido As New DataColumn("Codigo", GetType(System.Int16))
+        'Dim dcnombre As New DataColumn("Nombre", GetType(System.String))
+        'dt.Columns.Add(dcCodido)
+        'dt.Columns.Add(dcnombre)
+        'dr = dt.NewRow
+        'dr("Codigo") = 24
+        'dr("Nombre") = "gdfgdf"
+        'dt.Rows.Add(dr)
+        'Me.dataGrid.DataContext = dt
+        'Dim row As DataGridViewRow = DataGridView1.Rows(0)
+        'row.Cells(0).Value = TextBox4.Text
+        'row.Cells(3).Value = TextBox3.Text
+        'row.Cells(2).Value = TextBox2.Text
+        'row.Cells(1).Value = TextBox1.Text
+
+        'Me.detalle2.da
+        'Dim dr As DataRow
+        'Dim fila As DataRowView = sender.selectedItem
+        'Dim data As New DataTable
+        'data.Rows.Add("12", "lalala", "23", "45", "fdgfd", "45")
+        ' Create new DataTable and DataSource objects.
+
+
+
+
 
     End Sub
 
     Private Sub factura_Loaded(sender As Object, e As RoutedEventArgs) Handles factura.Loaded
+        txtVendedor.Text = "Yander"
         txtNombre.IsEnabled = "False"
         txtCedula.IsEnabled = "False"
         txtTelefono.IsEnabled = "False"
         texDireccion.IsEnabled = "False"
         guardarCliente.IsEnabled = "False"
-           txtApellido.IsEnabled = "false"
+        txtApellido.IsEnabled = "false"
 
 
     End Sub

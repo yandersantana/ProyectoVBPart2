@@ -29,7 +29,7 @@
         <Label x:Name="label_Copy6" Content="Forma de Pago" HorizontalAlignment="Left" Margin="604,93,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,0.876" Grid.Row="1"/>
         <Label x:Name="label_Copy7" Content="Vendedor" HorizontalAlignment="Left" Margin="604,118,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.532,0.876" Grid.Row="1"/>
         <TextBox x:Name="texDireccion_Copy" HorizontalAlignment="Left" Height="19" Margin="728,146,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False" Grid.Row="1"/>
-        <TextBox x:Name="txtTelefono_Copy" HorizontalAlignment="Left" Height="19" Margin="728,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False" Grid.Row="1"/>
+        <TextBox x:Name="txtVendedor" HorizontalAlignment="Left" Height="19" Margin="728,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False" Grid.Row="1"/>
         <TextBox x:Name="txtNombre_Copy" HorizontalAlignment="Left" Height="19" Margin="728,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False" Grid.Row="1"/>
         <TextBox x:Name="txtCedula_Copy" HorizontalAlignment="Left" Height="19" Margin="728,90,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" IsEnabled="False" Grid.Row="1"/>
         <Label x:Name="label1" Content="Código" HorizontalAlignment="Left" Margin="44,201,0,0" VerticalAlignment="Top" Grid.Row="1"/>
@@ -41,15 +41,15 @@
         <TextBox x:Name="codigo" HorizontalAlignment="Left" Height="23" Margin="22,232,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
         <Label x:Name="label5" Content="Iva" HorizontalAlignment="Left" Margin="869,196,0,0" VerticalAlignment="Top" Grid.Row="1"/>
         <Button x:Name="agregar" Content="Agregar" HorizontalAlignment="Left" Margin="940,212,0,0" VerticalAlignment="Top" Width="106" Background="#FFE8F1BD" Height="43" BorderBrush="#FFD2EA9F" Grid.Row="1" RenderTransformOrigin="1.014,0.512"/>
-        <DataGrid x:Name="detalle" HorizontalAlignment="Left" ItemsSource="{Binding Path=producto}" Margin="11,280,0,0" VerticalAlignment="Top" Height="144" Width="1035" Grid.Row="1" AutoGenerateColumns="False">
-        <DataGrid.Columns>
+        <DataGrid x:Name="detalle" HorizontalAlignment="Left" ItemsSource="{Binding Path=producto}" Margin="11,280,0,0" VerticalAlignment="Top" Height="96" Width="1035" Grid.Row="1" AutoGenerateColumns="False">
+            <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding codigo}" Header="ID" Width="70"/>
                 <DataGridTextColumn Binding="{Binding nombreProducto}" Header="Nombre" Width="420"/>
                 <DataGridTextColumn Binding="{Binding precioUnitario}" Header="Precio" Width="200"/>
                 <DataGridTextColumn Binding="{Binding cantidad}" Header="Cantidad" Width="100"/>
                 <DataGridTextColumn Binding="{Binding registraIva}" Header="Registra Iva" Width="100"/>
-            <DataGridTextColumn Binding="{Binding totalPro}" Header="Precio Por Cantidad"/>
-        </DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding totalPro}" Header="Precio Por Cantidad"/>
+            </DataGrid.Columns>
         </DataGrid>
         <Label x:Name="label6" Content="Subtotal" HorizontalAlignment="Left" Margin="737,426,0,0" VerticalAlignment="Top" Width="72" Grid.Row="1"/>
         <Label x:Name="label7" Content="Total" HorizontalAlignment="Left" Margin="737,526,0,0" VerticalAlignment="Top" Grid.Row="1"/>

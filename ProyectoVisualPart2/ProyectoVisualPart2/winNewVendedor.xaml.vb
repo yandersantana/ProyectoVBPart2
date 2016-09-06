@@ -1,10 +1,10 @@
-﻿Imports System.Data.OleDb
+﻿Imports System.Data
+Imports System.Data.OleDb
 
 Public Class winNewVendedor
-
     Private strPath = "..\..\dataBaseVisual.mdb"
-
-    Private strConexion As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & strPath
+    Private strConexion As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & strPath
+    'Private strConexion As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & strPath
 
     Private Sub btnCancel_Click(sender As Object, e As RoutedEventArgs) Handles btnCancel.Click
         'Dim winADM As New winAdministrador
@@ -48,15 +48,54 @@ Public Class winNewVendedor
                 cmd.Parameters.Add(New OleDbParameter("Contacto", CType(txtContacto.Text, String)))
                 cmd.Parameters.Add(New OleDbParameter("administrador", False))
                 cmd.ExecuteNonQuery()
-
-
-
-
             End Using
+            MessageBox.Show("Se ha hecho el registro con exito .. !!")
             Me.Close()
         End If
 
     End Sub
 
+    Private Sub btnActualizar_Click(sender As Object, e As RoutedEventArgs) Handles btnActualizar.Click
+        If (txtNombre.Text = "" Or txtApellido.Text = "" Or txtEdad.Text = "" Or txtEmail.Text = "" Or
+            txtTelefono.Text = "" Or txtGenero.Text = "" Or txtcedula.Text = "" Or txtUsuario.Text = "" Or txtContraseña.Text = "" Or txtFC.Text = "" Or txtContacto.Text = "") Then
+            MessageBox.Show("Error .. !! Hay campos vacios")
+        Else
+            Using conexion As New OleDbConnection(strConexion)
+                conexion.Open()
+                Dim consultas As String = "Select * FROM usuarios"
 
+                Dim adapter As New OleDbDataAdapter(New OleDbCommand(consultas, conexion))
+                Dim vendedorCmBuilder As New OleDbCommandBuilder(adapter)
+                Dim dsvendedor = New DataSet("Tienda")
+                adapter.Fill(dsvendedor, "Usuarios")
+                'Dim found = False
+                'txtId.IsReadOnly = False
+                For Each vended As DataRow In dsvendedor.Tables("usuarios").Rows
+                    If vended("Id") = Me.txtId.Text Then
+                        vended("Nombre") = Me.txtNombre.Text
+                        vended("Apellido") = Me.txtApellido.Text
+                        vended("Edad") = Me.txtEdad.Text
+                        vended("Email") = Me.txtEmail.Text
+                        vended("Telefono") = Me.txtTelefono.Text
+                        vended("Genero") = Me.txtGenero.Text
+                        vended("Cedula") = Me.txtcedula.Text
+                        vended("Usuario") = Me.txtUsuario.Text
+                        vended("Contraseña") = Me.txtContraseña.Text
+                        vended("FechaContrato") = Me.txtFC.Text
+                        vended("Contacto") = Me.txtContacto.Text
+                        Exit For
+                    End If
+                Next
+
+                Try
+                    adapter.Update(dsvendedor.Tables("usuarios"))
+                    MessageBox.Show("Se ha realizado la actualizacion con exito")
+                Catch ex As Exception
+                    MessageBox.Show("Error al guardar")
+                End Try
+            End Using
+
+        End If
+
+    End Sub
 End Class

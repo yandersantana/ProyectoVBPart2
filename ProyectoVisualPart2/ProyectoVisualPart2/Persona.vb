@@ -1,4 +1,14 @@
 ﻿Public Class Persona
+    Private _id As String
+    Public Property Id() As String
+        Get
+            Return _id
+        End Get
+        Set(ByVal value As String)
+            _id = value
+        End Set
+    End Property
+
     Private _nombre As String
     Public Property Nombre() As String
         Get
@@ -20,12 +30,12 @@
     End Property
 
 
-    Private _edad As Integer
-    Public Property Edad() As Integer
+    Private _edad As String
+    Public Property Edad() As String
         Get
             Return _edad
         End Get
-        Set(ByVal value As Integer)
+        Set(ByVal value As String)
             _edad = value
         End Set
     End Property
@@ -60,7 +70,7 @@
     End Property
     Private _cedulaIdentidad As String
 
-    Public Property CedulaIdentidad As String
+    Public Property CedulaIdentidad() As String
         Get
             Return _cedulaIdentidad
         End Get
@@ -69,7 +79,8 @@
         End Set
     End Property
 
-    Sub New(nombre As String, apellido As String, edad As Integer, email As String, telefono As String, genero As String, cedula As String)
+    Sub New(id As String, nombre As String, apellido As String, edad As String, email As String, telefono As String, genero As String, cedula As String)
+        Me.Id = id
         Me.Nombre = nombre
         Me.Apellido = apellido
         Me.Edad = edad

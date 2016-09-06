@@ -25,7 +25,11 @@ Public Class WinAggProducto
 
 
                 cmd.ExecuteNonQuery()
-
+                Try
+                    MessageBox.Show("Se agrego correctamente el producto")
+                Catch ex As Exception
+                    MessageBox.Show("Error al guardar")
+                End Try
 
 
 

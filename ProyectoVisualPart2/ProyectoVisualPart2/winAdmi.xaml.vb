@@ -59,7 +59,6 @@ Public Class winAdmi
 
             For Each em As DataRow In dsMaster.Tables("Empleado").Rows
                 If (em(8).ToString = persona.Nombre) Then
-                    MessageBox.Show("entro 2 lala")
                     txtNombre.Text = em(1)
                     txtApellido.Text = em(2)
                     txtEdad.Text = em(3)

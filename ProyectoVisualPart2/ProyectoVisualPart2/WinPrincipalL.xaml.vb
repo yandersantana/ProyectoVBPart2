@@ -20,8 +20,9 @@ Class WinPrincipalL
             conexion.Open()
 
             Dim consulta As String = "SELECT Count(*) FROM usuarios WHERE Usuario = @usuario and Contraseña = @password"
-
+            Dim consulta2 As String = "SELECT Nombre FROM usuarios WHERE Usuario=txtUsuario.Text"
             Dim cmd As New OleDbCommand(consulta, conexion)
+            Dim cmd2 As New OleDbCommand(consulta, conexion)
             cmd.Parameters.AddWithValue("@usuario", txtUsuario.Text)
             cmd.Parameters.AddWithValue("@password", passwordBox.Password)
 

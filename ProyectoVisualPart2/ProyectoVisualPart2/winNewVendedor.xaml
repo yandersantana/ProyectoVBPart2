@@ -5,40 +5,41 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoVisualPart2"
         mc:Ignorable="d"
-        Title="winNewVendedor" Height="537.036" Width="404.938" Closing="Window_Closing" Loaded="Window_Loaded">
+        Title="winNewVendedor" Height="619.536" Width="545.938" Closing="Window_Closing" Loaded="Window_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>
             <ColumnDefinition Width="368*"/>
             <ColumnDefinition Width="4*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="label_Copy" Content="Nombre:" HorizontalAlignment="Left" Margin="22.813,85,0,0" VerticalAlignment="Top" Height="30" Width="80" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
-        <TextBox x:Name="txtNombre" Text ="{Binding Nombre}" HorizontalAlignment="Left" Height="21" Margin="136.813,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Grid.Column="1"/>
-        <Label x:Name="label_Copy1" Content="Apellido" HorizontalAlignment="Left" Margin="22.813,119,0,0" VerticalAlignment="Top" Height="27" Width="80" RenderTransformOrigin="0.613,0.386" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
-        <TextBox x:Name="txtApellido" Text ="{Binding Formula}" HorizontalAlignment="Left" Height="22" Margin="136.813,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Grid.Column="1"/>
-        <Label x:Name="label_Copy2" Content="Cedula:" HorizontalAlignment="Left" Margin="22.813,152,0,0" VerticalAlignment="Top" Height="25" Width="61" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
-        <TextBox x:Name="txtCedula" Text ="{Binding Costo}" HorizontalAlignment="Left" Height="22" Margin="136.813,155,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Grid.Column="1"/>
-        <Label x:Name="label_Copy3" Content="Edad:" HorizontalAlignment="Left" Margin="22.813,185,0,0" VerticalAlignment="Top" Height="32" Width="64" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
-        <TextBox x:Name="txtEdad" Text ="{Binding Precio}" HorizontalAlignment="Left" Height="22" Margin="136.813,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Grid.Column="1"/>
-        <Label x:Name="label_Copy5" Content="Datos del Vendedor" HorizontalAlignment="Left" Margin="82.813,10,0,0" VerticalAlignment="Top" Height="30" Width="185" FontFamily="Forte" FontSize="18" Grid.Column="1"/>
-        <Label x:Name="label_Copy4" Content="Email:" HorizontalAlignment="Left" Margin="22.813,218,0,0" VerticalAlignment="Top" Height="30" Width="80" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
-        <TextBox x:Name="txtEmail" Text ="{Binding Nombre}" HorizontalAlignment="Left" Height="22" Margin="136.813,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Grid.Column="1"/>
-        <Label x:Name="label_Copy6" Content="Telefono" HorizontalAlignment="Left" Margin="22.813,252,0,0" VerticalAlignment="Top" Height="27" Width="80" RenderTransformOrigin="0.613,0.386" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
-        <TextBox x:Name="txtTelefono" Text ="{Binding Formula}" HorizontalAlignment="Left" Height="21" Margin="136.813,256,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Grid.Column="1"/>
-        <Label x:Name="label_Copy7" Content="Genero:" HorizontalAlignment="Left" Margin="22.813,285,0,0" VerticalAlignment="Top" Height="25" Width="80" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
-        <TextBox x:Name="txtGenero" Text ="{Binding Costo}" HorizontalAlignment="Left" Height="21" Margin="136.813,289,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Grid.Column="1"/>
-        <Label x:Name="label_Copy8" Content="Usuario:" HorizontalAlignment="Left" Margin="22.813,319,0,0" VerticalAlignment="Top" Height="32" Width="64" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
-        <TextBox x:Name="txtUsuario" Text ="{Binding Precio}" HorizontalAlignment="Left" Height="21" Margin="136.813,321,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Grid.Column="1"/>
-        <Button x:Name="btnRegistrar" Content="Registrar" HorizontalAlignment="Left" Margin="41.813,463,0,0" VerticalAlignment="Top" Width="119" FontFamily="Showcard Gothic" FontSize="14" Height="33" Grid.Column="1"/>
-        <Label x:Name="label_Copy9" Content="Contraseña:" HorizontalAlignment="Left" Margin="22.813,350,0,0" VerticalAlignment="Top" Height="25" Width="80" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
-        <TextBox x:Name="txtContraseña" Text ="{Binding Costo}" HorizontalAlignment="Left" Height="21" Margin="136.813,354,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Grid.Column="1"/>
-        <Label x:Name="label_Copy10" Content="Id:" HorizontalAlignment="Left" Margin="22.813,55,0,0" VerticalAlignment="Top" Height="32" Width="64" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
-        <TextBox x:Name="txtId" Text ="{Binding Precio}" HorizontalAlignment="Left" Height="21" Margin="136.813,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Grid.Column="1"/>
-        <Label x:Name="label_Copy11" Content="Fecha de Contrato" HorizontalAlignment="Left" Margin="22.813,382,0,0" VerticalAlignment="Top" Height="32" Width="109" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
-        <TextBox x:Name="txtFC" Text ="{Binding Precio}" HorizontalAlignment="Left" Height="21" Margin="136.813,384,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Grid.Column="1"/>
-        <Label x:Name="label_Copy12" Content="Direcciòn" HorizontalAlignment="Left" Margin="22.813,413,0,0" VerticalAlignment="Top" Height="25" Width="80" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
-        <TextBox x:Name="txtContacto" Text ="{Binding Costo}" HorizontalAlignment="Left" Height="21" Margin="136.813,417,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" Grid.Column="1"/>
-        <Button x:Name="btnCancel" Content="Cancelar" HorizontalAlignment="Left" Margin="187.813,463,0,0" VerticalAlignment="Top" Width="119" FontFamily="Showcard Gothic" FontSize="14" Height="33" Grid.Column="1"/>
+        <Label x:Name="label_Copy" Content="Nombre:" HorizontalAlignment="Left" Margin="23,99,0,0" VerticalAlignment="Top" Height="35" Width="119" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
+        <TextBox x:Name="txtNombre" Text ="{Binding Nombre}" HorizontalAlignment="Left" Height="24" Margin="193,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Column="1"/>
+        <Label x:Name="label_Copy1" Content="Apellido" HorizontalAlignment="Left" Margin="23,139,0,0" VerticalAlignment="Top" Height="32" Width="119" RenderTransformOrigin="0.613,0.386" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
+        <TextBox x:Name="txtApellido" Text ="{Binding Apellido}" HorizontalAlignment="Left" Height="26" Margin="193,142,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Column="1"/>
+        <Label x:Name="label_Copy2" Content="Cedula:" HorizontalAlignment="Left" Margin="23,178,0,0" VerticalAlignment="Top" Height="30" Width="91" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
+        <Label x:Name="label_Copy3" Content="Edad:" HorizontalAlignment="Left" Margin="23,217,0,0" VerticalAlignment="Top" Height="38" Width="96" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
+        <TextBox x:Name="txtEdad" Text ="{Binding Edad}" HorizontalAlignment="Left" Height="26" Margin="193,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Column="1"/>
+        <Label x:Name="label_Copy5" Content="Datos del Vendedor" HorizontalAlignment="Left" Margin="113,10,0,0" VerticalAlignment="Top" Height="35" Width="277" FontFamily="Forte" FontSize="18" Grid.Column="1"/>
+        <Label x:Name="label_Copy4" Content="Email:" HorizontalAlignment="Left" Margin="23,256,0,0" VerticalAlignment="Top" Height="36" Width="119" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
+        <TextBox x:Name="txtEmail" Text ="{Binding Email}" HorizontalAlignment="Left" Height="26" Margin="193,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Column="1"/>
+        <Label x:Name="label_Copy6" Content="Telefono" HorizontalAlignment="Left" Margin="23,296,0,0" VerticalAlignment="Top" Height="33" Width="119" RenderTransformOrigin="0.613,0.386" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
+        <TextBox x:Name="txtTelefono" Text ="{Binding Telefono}" HorizontalAlignment="Left" Height="24" Margin="193,301,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Column="1"/>
+        <Label x:Name="label_Copy7" Content="Genero:" HorizontalAlignment="Left" Margin="23,336,0,0" VerticalAlignment="Top" Height="29" Width="119" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
+        <TextBox x:Name="txtGenero" Text ="{Binding Genero}" HorizontalAlignment="Left" Height="25" Margin="193,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Column="1"/>
+        <Label x:Name="label_Copy8" Content="Usuario:" HorizontalAlignment="Left" Margin="23,375,0,0" VerticalAlignment="Top" Height="39" Width="96" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
+        <TextBox x:Name="txtUsuario" Text ="{Binding Usuario}" HorizontalAlignment="Left" Height="24" Margin="193,379,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Column="1"/>
+        <Button x:Name="btnRegistrar" Content="Registrar" HorizontalAlignment="Left" Margin="23,532,0,0" VerticalAlignment="Top" Width="119" FontFamily="Showcard Gothic" FontSize="14" Height="33" Grid.Column="1"/>
+        <Label x:Name="label_Copy9" Content="Contraseña:" HorizontalAlignment="Left" Margin="23,412,0,0" VerticalAlignment="Top" Height="30" Width="119" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
+        <TextBox x:Name="txtContraseña" Text ="{Binding Contraseña}" HorizontalAlignment="Left" Height="25" Margin="193,417,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Column="1"/>
+        <Label x:Name="label_Copy10" Content="Id:" HorizontalAlignment="Left" Margin="23,63,0,0" VerticalAlignment="Top" Height="39" Width="96" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
+        <TextBox x:Name="txtId" Text ="{Binding Id}" HorizontalAlignment="Left" Height="25" Margin="193,65,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Column="1"/>
+        <Label x:Name="label_Copy11" Content="Fecha de Contrato" HorizontalAlignment="Left" Margin="23,450,0,0" VerticalAlignment="Top" Height="38" Width="163" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
+        <TextBox x:Name="txtFC" Text ="{Binding FechaContrato}" HorizontalAlignment="Left" Height="25" Margin="193,452,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Column="1"/>
+        <Label x:Name="label_Copy12" Content="Direcciòn" HorizontalAlignment="Left" Margin="23,487,0,0" VerticalAlignment="Top" Height="29" Width="119" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
+        <TextBox x:Name="txtContacto" Text ="{Binding Contacto}" HorizontalAlignment="Left" Height="24" Margin="193,492,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Column="1"/>
+        <Button x:Name="btnCancel" Content="Cancelar" HorizontalAlignment="Left" Margin="329,532,0,0" VerticalAlignment="Top" Width="119" FontFamily="Showcard Gothic" FontSize="14" Height="33" Grid.Column="1"/>
+        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="179,532,0,0" VerticalAlignment="Top" Width="119" FontFamily="Showcard Gothic" FontSize="14" Height="33" Grid.Column="1"/>
+        <TextBox x:Name="txtcedula" Text ="{Binding CedulaIdentidad}" HorizontalAlignment="Left" Height="26" Margin="193,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Column="1"/>
 
     </Grid>
 </Window>
