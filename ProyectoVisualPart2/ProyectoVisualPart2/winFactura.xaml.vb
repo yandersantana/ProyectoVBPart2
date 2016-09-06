@@ -42,8 +42,8 @@ Public Class winFactura
                 For Each em As DataRow In dsMaster.Tables("Productos").Rows
                     If (em(0) = result) Then
                         nombreProducto.Text = em(1)
-                        pUnitario.Text = em(2)
-                        registraIva.Text = em(3)
+                        txtpUnitario.Text = em(2)
+
                         existe = True
 
                         Exit For
@@ -59,6 +59,11 @@ Public Class winFactura
     End Sub
 
     Private Sub agregar_Click(sender As Object, e As RoutedEventArgs) Handles agregar.Click
+        txtSubt.Text = Val(CDbl(txtpUnitario.Text) * CDbl(txtcantid.Text))
+        txtsubtotalFinal.Text = Val(CDbl(txtSubt.Text) + CDbl(txtsubtotalFinal.Text))
+        txtIva.Text = Val(CDbl(txtsubtotalFinal.Text) * 0.14)
+        txttotal.Text = Val(CDbl(txtsubtotalFinal.Text) + CDbl(txtIva.Text))
+
         'Dim produc As New Producto()
         'produc.NombreProducto = nombreProducto.Text
         'produc.Codigo = Convert.ToString(result)
@@ -104,9 +109,10 @@ Public Class winFactura
         txtCedula.IsEnabled = "False"
         txtTelefono.IsEnabled = "False"
         texDireccion.IsEnabled = "False"
-        guardarCliente.IsEnabled = "False"
         txtApellido.IsEnabled = "false"
-
+        txtsubtotalFinal.Text = 0.00
+        txtIva.Text = 0.00
+        txttotal.Text = 0.00
 
     End Sub
 
@@ -132,44 +138,45 @@ Public Class winFactura
         End If
     End Sub
 
-    Private Sub guardarCliente_Click(sender As Object, e As RoutedEventArgs) Handles guardarCliente.Click
-        If (txtCodigo.Text = "" And txtNombre.Text = "" And txtApellido.Text = "") Then
-            MessageBox.Show("Campos Vacios")
 
 
-        Else
-            Me.validarExistencia()
-            If (existe) Then
-                MessageBox.Show("Cliente ya existe asigne otro código")
-            Else
-                Using conexion As New OleDbConnection(strConexion)
-                    conexion.Open()
-                    Dim Insertar As String
-                    Insertar = "INSERT INTO cliente ([Id],[Nombre], [Apellido], [Telefono], [Cedula], [Contacto]) values ( txtCodigo.Text,txtNombre.Text,
-            txtApellido.Text,txtTelefono.Text,txtCedula.Text,texDireccion.Text)"
-                    Dim cmd As OleDbCommand = New OleDbCommand(Insertar, conexion)
-                    cmd.Parameters.Add(New OleDbParameter("Id", CType(txtCodigo.Text, String)))
-                    cmd.Parameters.Add(New OleDbParameter("Nombre", CType(txtNombre.Text, String)))
-                    cmd.Parameters.Add(New OleDbParameter("Apellido", CType(txtApellido.Text, String)))
-                    cmd.Parameters.Add(New OleDbParameter("Telefono", CType(txtTelefono.Text, String)))
-                    cmd.Parameters.Add(New OleDbParameter("Cedula", CType(txtCedula.Text, String)))
-                    cmd.Parameters.Add(New OleDbParameter("Contacto", CType(texDireccion.Text, String)))
+    'Private Sub guardarCliente_Click(sender As Object, e As RoutedEventArgs) Handles guardarCliente.Click
+    '    If (txtCodigo.Text = "" And txtNombre.Text = "" And txtApellido.Text = "") Then
+    '        MessageBox.Show("Campos Vacios")
+    '    Else
+    '        Me.validarExistencia()
+    '        If (existe) Then
+    '            MessageBox.Show("Cliente ya existe asigne otro código")
+    '        Else
+    '            Using conexion As New OleDbConnection(strConexion)
+    '                conexion.Open()
+    '                Dim Insertar As String
+    '                Insertar = "INSERT INTO cliente ([Id],[Nombre], [Apellido], [Telefono], [Cedula], [Contacto]) values ( txtCodigo.Text,txtNombre.Text,
+    '        txtApellido.Text,txtTelefono.Text,txtCedula.Text,texDireccion.Text)"
+    '                Dim cmd As OleDbCommand = New OleDbCommand(Insertar, conexion)
+    '                cmd.Parameters.Add(New OleDbParameter("Id", CType(txtCodigo.Text, String)))
+    '                cmd.Parameters.Add(New OleDbParameter("Nombre", CType(txtNombre.Text, String)))
+    '                cmd.Parameters.Add(New OleDbParameter("Apellido", CType(txtApellido.Text, String)))
+    '                cmd.Parameters.Add(New OleDbParameter("Telefono", CType(txtTelefono.Text, String)))
+    '                cmd.Parameters.Add(New OleDbParameter("Cedula", CType(txtCedula.Text, String)))
+    '                cmd.Parameters.Add(New OleDbParameter("Contacto", CType(texDireccion.Text, String)))
 
-                    cmd.ExecuteNonQuery()
-
-
-
-
-                End Using
-            End If
+    '                cmd.ExecuteNonQuery()
 
 
 
 
+    '            End Using
+    '        End If
 
-        End If
 
-    End Sub
+
+
+
+    '    End If
+
+    'End Sub
+
     Public Sub validarExistencia()
 
         result = Convert.ToDouble(txtCodigo.Text)
@@ -191,7 +198,7 @@ Public Class winFactura
                     txtCedula.IsEnabled = "False"
                     txtTelefono.IsEnabled = "False"
                     texDireccion.IsEnabled = "False"
-                    guardarCliente.IsEnabled = "False"
+                    NuevoCliente.IsEnabled = "False"
                     txtApellido.IsEnabled = "false"
                     Exit For
                 Else
@@ -200,11 +207,17 @@ Public Class winFactura
                     txtCedula.IsEnabled = "true"
                     txtTelefono.IsEnabled = "true"
                     texDireccion.IsEnabled = "true"
-                    guardarCliente.IsEnabled = "true"
+                    NuevoCliente.IsEnabled = "true"
                 End If
 
             Next
 
         End Using
+    End Sub
+
+    Private Sub NuevoCliente_Click(sender As Object, e As RoutedEventArgs) Handles NuevoCliente.Click
+        Dim newcliente As New winNewCliente
+        newcliente.Show()
+        Me.Hide()
     End Sub
 End Class

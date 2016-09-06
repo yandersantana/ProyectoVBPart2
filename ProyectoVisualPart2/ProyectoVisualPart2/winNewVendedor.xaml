@@ -19,7 +19,7 @@
         <Label x:Name="label_Copy2" Content="Cedula:" HorizontalAlignment="Left" Margin="23,178,0,0" VerticalAlignment="Top" Height="30" Width="91" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
         <Label x:Name="label_Copy3" Content="Edad:" HorizontalAlignment="Left" Margin="23,217,0,0" VerticalAlignment="Top" Height="38" Width="96" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
         <TextBox x:Name="txtEdad" Text ="{Binding Edad}" HorizontalAlignment="Left" Height="26" Margin="193,219,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Column="1"/>
-        <Label x:Name="label_Copy5" Content="Datos del Vendedor" HorizontalAlignment="Left" Margin="113,10,0,0" VerticalAlignment="Top" Height="35" Width="277" FontFamily="Forte" FontSize="18" Grid.Column="1"/>
+        <Label x:Name="label_Copy5" Content="Datos del Vendedor" HorizontalAlignment="Left" Margin="144,10,0,0" VerticalAlignment="Top" Height="35" Width="278" FontFamily="Forte" FontSize="18" Grid.Column="1"/>
         <Label x:Name="label_Copy4" Content="Email:" HorizontalAlignment="Left" Margin="23,256,0,0" VerticalAlignment="Top" Height="36" Width="119" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
         <TextBox x:Name="txtEmail" Text ="{Binding Email}" HorizontalAlignment="Left" Height="26" Margin="193,259,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" Grid.Column="1"/>
         <Label x:Name="label_Copy6" Content="Telefono" HorizontalAlignment="Left" Margin="23,296,0,0" VerticalAlignment="Top" Height="33" Width="119" RenderTransformOrigin="0.613,0.386" FontFamily="Chiller" FontSize="18" Grid.Column="1"/>
