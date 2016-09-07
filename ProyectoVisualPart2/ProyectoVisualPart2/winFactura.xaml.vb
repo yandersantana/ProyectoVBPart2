@@ -24,15 +24,15 @@ Public Class winFactura
 
     End Sub
 
-    Private Sub codigo_MouseDoubleClick(sender As Object, e As MouseButtonEventArgs) Handles codigo.MouseDoubleClick
+    Private Sub codigo_MouseDoubleClick(sender As Object, e As MouseButtonEventArgs) Handles txtcodigoPro.MouseDoubleClick
 
     End Sub
 
-    Private Sub codigo_KeyDown(sender As Object, e As KeyEventArgs) Handles codigo.KeyDown
+    Private Sub codigo_KeyDown(sender As Object, e As KeyEventArgs) Handles txtcodigoPro.KeyDown
         If e.Key = Key.Enter Then
 
             Dim existe As Boolean = False
-            result = Convert.ToDouble(codigo.Text)
+            result = Convert.ToDouble(txtcodigoPro.Text)
             Using dbConexion As New OleDbConnection(strConexion) 'entrar y salir de la base
                 Dim strQuery As String = "SELECT * FROM producto"
                 Dim dbAdapter As New OleDbDataAdapter(strQuery, strConexion)
@@ -63,6 +63,47 @@ Public Class winFactura
         txtsubtotalFinal.Text = Val(CDbl(txtSubt.Text) + CDbl(txtsubtotalFinal.Text))
         txtIva.Text = Val(CDbl(txtsubtotalFinal.Text) * 0.14)
         txttotal.Text = Val(CDbl(txtsubtotalFinal.Text) + CDbl(txtIva.Text))
+
+        Dim newfact As New winFactura
+        Using conexion As New OleDbConnection(strConexion)
+            conexion.Open()
+            Dim Insertar As String
+            Insertar = "INSERT INTO factura ( [Nfactura], [NombreCliente], [ApeCliente], [CodCliente], [CedCliente], [ForPago], [Vendedor], [Fecha], [codProd] ,[Descripcion] , [Punitario], [Cantidad], [Subtotal],[SubFinal], [Descuento], [Iva] ,[Total] ) 
+values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedula.Text,txtPago.Text,txtVendedor.Text,txtFecha.Text,txtcodigoPro.Text,nombreProducto.Text,txtpUnitario.Text,txtcantid.Text,txtSubt.Text,txtsubtotalFinal.Text,txtdescuento.Text,txtIva.Text,txttotal.Text)"
+            Dim cmd As OleDbCommand = New OleDbCommand(Insertar, conexion)
+            cmd.Parameters.Add(New OleDbParameter("Nfactura", CType(txtNfactura.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("NombreCliente", CType(txtNombre.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("ApeCliente", CType(txtApellido.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("CodCliente", CType(txtCodigo.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("CedCliente", CType(txtCedula.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("ForPago", CType(txtPago.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("Vendedor", CType(txtVendedor.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("Fecha", CType(txtFecha.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("codProd", CType(txtcodigoPro.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("Descripcion", CType(nombreProducto.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("Punitario", CType(txtpUnitario.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("Cantidad", CType(txtcantid.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("Subtotal", CType(txtSubt.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("SubFinal", CType(txtsubtotalFinal.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("Descuento", CType(txtdescuento.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("Iva", CType(txtIva.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("Total", CType(txttotal.Text, String)))
+
+
+            Dim strQuery2 As String = "SELECT * FROM factura WHERE Nfactura='" & txtNfactura.Text & "'"
+            Dim dbAdapter2 As New OleDbDataAdapter(strQuery2, strConexion)
+            Dim dsMaster2 As New DataSet("Datos")
+            dbAdapter2.Fill(dsMaster2, "Factura")
+            DGdetalle.DataContext = dsMaster2
+            newfact.UpdateDataGrid()
+
+
+
+            cmd.ExecuteNonQuery()
+        End Using
+
+
+
 
         'Dim produc As New Producto()
         'produc.NombreProducto = nombreProducto.Text
@@ -113,6 +154,8 @@ Public Class winFactura
         txtsubtotalFinal.Text = 0.00
         txtIva.Text = 0.00
         txttotal.Text = 0.00
+        txtNfactura.IsEnabled = "true"
+
 
     End Sub
 
@@ -138,44 +181,6 @@ Public Class winFactura
         End If
     End Sub
 
-
-
-    'Private Sub guardarCliente_Click(sender As Object, e As RoutedEventArgs) Handles guardarCliente.Click
-    '    If (txtCodigo.Text = "" And txtNombre.Text = "" And txtApellido.Text = "") Then
-    '        MessageBox.Show("Campos Vacios")
-    '    Else
-    '        Me.validarExistencia()
-    '        If (existe) Then
-    '            MessageBox.Show("Cliente ya existe asigne otro código")
-    '        Else
-    '            Using conexion As New OleDbConnection(strConexion)
-    '                conexion.Open()
-    '                Dim Insertar As String
-    '                Insertar = "INSERT INTO cliente ([Id],[Nombre], [Apellido], [Telefono], [Cedula], [Contacto]) values ( txtCodigo.Text,txtNombre.Text,
-    '        txtApellido.Text,txtTelefono.Text,txtCedula.Text,texDireccion.Text)"
-    '                Dim cmd As OleDbCommand = New OleDbCommand(Insertar, conexion)
-    '                cmd.Parameters.Add(New OleDbParameter("Id", CType(txtCodigo.Text, String)))
-    '                cmd.Parameters.Add(New OleDbParameter("Nombre", CType(txtNombre.Text, String)))
-    '                cmd.Parameters.Add(New OleDbParameter("Apellido", CType(txtApellido.Text, String)))
-    '                cmd.Parameters.Add(New OleDbParameter("Telefono", CType(txtTelefono.Text, String)))
-    '                cmd.Parameters.Add(New OleDbParameter("Cedula", CType(txtCedula.Text, String)))
-    '                cmd.Parameters.Add(New OleDbParameter("Contacto", CType(texDireccion.Text, String)))
-
-    '                cmd.ExecuteNonQuery()
-
-
-
-
-    '            End Using
-    '        End If
-
-
-
-
-
-    '    End If
-
-    'End Sub
 
     Public Sub validarExistencia()
 
@@ -219,5 +224,9 @@ Public Class winFactura
         Dim newcliente As New winNewCliente
         newcliente.Show()
         Me.Hide()
+    End Sub
+
+    Public Sub UpdateDataGrid()
+        Me.factura_Loaded(Nothing, Nothing)
     End Sub
 End Class
