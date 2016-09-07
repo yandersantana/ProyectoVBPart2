@@ -10,10 +10,7 @@ Public Class winFactura
     Public existe As Boolean = False
     Private listaProducto As New ArrayList
     Public result As Double
-    Dim dt As New DataTable
-    Dim dr As DataRow
-    Dim dcCodido As New DataColumn("Codigo", GetType(System.Int16))
-    Dim dcnombre As New DataColumn("Nombre", GetType(System.String))
+    Public porIva As Double
 
     Private Sub salir_Click(sender As Object, e As RoutedEventArgs) Handles salir.Click
         Me.Close()
@@ -59,9 +56,10 @@ Public Class winFactura
     End Sub
 
     Private Sub agregar_Click(sender As Object, e As RoutedEventArgs) Handles agregar.Click
+        ValordeIva()
         txtSubt.Text = Val(CDbl(txtpUnitario.Text) * CDbl(txtcantid.Text))
         txtsubtotalFinal.Text = Val(CDbl(txtSubt.Text) + CDbl(txtsubtotalFinal.Text))
-        txtIva.Text = Val(CDbl(txtsubtotalFinal.Text) * 0.14)
+        txtIva.Text = Val(CDbl(txtsubtotalFinal.Text) * porIva)
         txttotal.Text = Val(CDbl(txtsubtotalFinal.Text) + CDbl(txtIva.Text))
 
         Dim newfact As New winFactura
@@ -88,58 +86,18 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
             cmd.Parameters.Add(New OleDbParameter("Descuento", CType(txtdescuento.Text, String)))
             cmd.Parameters.Add(New OleDbParameter("Iva", CType(txtIva.Text, String)))
             cmd.Parameters.Add(New OleDbParameter("Total", CType(txttotal.Text, String)))
+            cmd.ExecuteNonQuery()
+        End Using
+        limpiar()
 
-
-            Dim strQuery2 As String = "SELECT * FROM factura WHERE Nfactura='" & txtNfactura.Text & "'"
+        Using conexion As New OleDbConnection(strConexion)
+            Dim strQuery2 As String = "SELECT codProd , Descripcion , Punitario , Cantidad , Subtotal FROM factura WHERE Nfactura='" & txtNfactura.Text & "'"
             Dim dbAdapter2 As New OleDbDataAdapter(strQuery2, strConexion)
             Dim dsMaster2 As New DataSet("Datos")
             dbAdapter2.Fill(dsMaster2, "Factura")
             DGdetalle.DataContext = dsMaster2
             newfact.UpdateDataGrid()
-
-
-
-            cmd.ExecuteNonQuery()
         End Using
-
-
-
-
-        'Dim produc As New Producto()
-        'produc.NombreProducto = nombreProducto.Text
-        'produc.Codigo = Convert.ToString(result)
-
-        'produc.RegistraIva = registraIva.Text
-        'produc.PrecioUnitario = Convert.ToDouble(pUnitario.Text)
-        'produc.Cantidad = Convert.ToInt16(cantid.Text)
-        'produc.TotalPro = produc.Cantidad * produc.PrecioUnitario
-        'listaProducto.Add(produc)
-        'Dim dt As New DataTable
-        'Dim dr As DataRow
-        'Dim dcCodido As New DataColumn("Codigo", GetType(System.Int16))
-        'Dim dcnombre As New DataColumn("Nombre", GetType(System.String))
-        'dt.Columns.Add(dcCodido)
-        'dt.Columns.Add(dcnombre)
-        'dr = dt.NewRow
-        'dr("Codigo") = 24
-        'dr("Nombre") = "gdfgdf"
-        'dt.Rows.Add(dr)
-        'Me.dataGrid.DataContext = dt
-        'Dim row As DataGridViewRow = DataGridView1.Rows(0)
-        'row.Cells(0).Value = TextBox4.Text
-        'row.Cells(3).Value = TextBox3.Text
-        'row.Cells(2).Value = TextBox2.Text
-        'row.Cells(1).Value = TextBox1.Text
-
-        'Me.detalle2.da
-        'Dim dr As DataRow
-        'Dim fila As DataRowView = sender.selectedItem
-        'Dim data As New DataTable
-        'data.Rows.Add("12", "lalala", "23", "45", "fdgfd", "45")
-        ' Create new DataTable and DataSource objects.
-
-
-
 
 
     End Sub
@@ -228,5 +186,28 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
 
     Public Sub UpdateDataGrid()
         Me.factura_Loaded(Nothing, Nothing)
+    End Sub
+
+    Private Sub limpiar()
+        txtcodigoPro.Text = ""
+        nombreProducto.Text = ""
+        txtcantid.Text = ""
+        txtpUnitario.Text = ""
+        txtSubt.Text = ""
+    End Sub
+
+    Private Sub ValordeIva()
+
+        If (txtProvincia.Text = "Esmeraldas" Or txtProvincia.Text = "Manabi") Then
+            porIva = 0.12
+        Else
+            porIva = 0.14
+        End If
+    End Sub
+
+    Private Sub porcDevolucion()
+        If (txtPago.Text = "") Then
+
+        End If
     End Sub
 End Class
