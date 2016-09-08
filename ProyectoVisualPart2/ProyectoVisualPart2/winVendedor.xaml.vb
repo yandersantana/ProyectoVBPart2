@@ -9,7 +9,7 @@ Public Class winVendedor
     Private strConexion As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & strPath
     'Private strConexion As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=" & strPath
     Public persona2 As New Persona
-    Public nombre As String
+    Public Shared nomVend
 
     Private Sub newFac_Click(sender As Object, e As RoutedEventArgs) Handles newFac.Click
         Dim winFac As New winFactura
@@ -35,14 +35,14 @@ Public Class winVendedor
                     txtNombre.Text = user(1)
                     txtApellido.Text = user(2)
                     txtEdad.Text = user(3)
-                    nombre = user(1)
+
                 End If
 
             Next
-
         End Using
-
+        nomVend = txtNombre.Text
     End Sub
+
 
 
 End Class

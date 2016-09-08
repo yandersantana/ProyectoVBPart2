@@ -10,7 +10,11 @@ Public Class winFactura
     Public existe As Boolean = False
     Private listaProducto As New ArrayList
     Public result As Double
+    Public result2 As String
     Public porIva As Double
+    Dim vfecha As Date = Now
+
+
 
     Private Sub salir_Click(sender As Object, e As RoutedEventArgs) Handles salir.Click
         Me.Close()
@@ -57,8 +61,8 @@ Public Class winFactura
 
     Private Sub agregar_Click(sender As Object, e As RoutedEventArgs) Handles agregar.Click
         ValordeIva()
-        txtSubt.Text = Val(CDbl(txtpUnitario.Text) * CDbl(txtcantid.Text))
-        txtsubtotalFinal.Text = Val(CDbl(txtSubt.Text) + CDbl(txtsubtotalFinal.Text))
+        txtSubt.Text = Val(CDbl(txtpUnitario.Text) * txtcantid.Text)
+        txtsubtotalFinal.Text = Val(txtSubt.Text + CDbl(txtsubtotalFinal.Text))
         txtIva.Text = Val(CDbl(txtsubtotalFinal.Text) * porIva)
         txttotal.Text = Val(CDbl(txtsubtotalFinal.Text) + CDbl(txtIva.Text))
 
@@ -67,14 +71,14 @@ Public Class winFactura
             conexion.Open()
             Dim Insertar As String
             Insertar = "INSERT INTO factura ( [Nfactura], [NombreCliente], [ApeCliente], [CodCliente], [CedCliente], [ForPago], [Vendedor], [Fecha], [codProd] ,[Descripcion] , [Punitario], [Cantidad], [Subtotal],[SubFinal], [Descuento], [Iva] ,[Total] ) 
-values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedula.Text,txtPago.Text,txtVendedor.Text,txtFecha.Text,txtcodigoPro.Text,nombreProducto.Text,txtpUnitario.Text,txtcantid.Text,txtSubt.Text,txtsubtotalFinal.Text,txtdescuento.Text,txtIva.Text,txttotal.Text)"
+values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedula.Text,comboBoxPago.SelectedValue.ToString,txtVendedor.Text,txtFecha.Text,txtcodigoPro.Text,nombreProducto.Text,txtpUnitario.Text,txtcantid.Text,txtSubt.Text,txtsubtotalFinal.Text,txtdescuento.Text,txtIva.Text,txttotal.Text)"
             Dim cmd As OleDbCommand = New OleDbCommand(Insertar, conexion)
             cmd.Parameters.Add(New OleDbParameter("Nfactura", CType(txtNfactura.Text, String)))
             cmd.Parameters.Add(New OleDbParameter("NombreCliente", CType(txtNombre.Text, String)))
             cmd.Parameters.Add(New OleDbParameter("ApeCliente", CType(txtApellido.Text, String)))
             cmd.Parameters.Add(New OleDbParameter("CodCliente", CType(txtCodigo.Text, String)))
             cmd.Parameters.Add(New OleDbParameter("CedCliente", CType(txtCedula.Text, String)))
-            cmd.Parameters.Add(New OleDbParameter("ForPago", CType(txtPago.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("ForPago", CType(comboBoxPago.SelectedValue.ToString, String)))
             cmd.Parameters.Add(New OleDbParameter("Vendedor", CType(txtVendedor.Text, String)))
             cmd.Parameters.Add(New OleDbParameter("Fecha", CType(txtFecha.Text, String)))
             cmd.Parameters.Add(New OleDbParameter("codProd", CType(txtcodigoPro.Text, String)))
@@ -98,23 +102,28 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
             DGdetalle.DataContext = dsMaster2
             newfact.UpdateDataGrid()
         End Using
+        porcDevolucion()
 
 
     End Sub
 
     Private Sub factura_Loaded(sender As Object, e As RoutedEventArgs) Handles factura.Loaded
-        txtVendedor.Text = "Yander"
+        Dim winFac As New winVendedor
+        txtVendedor.Text = winFac.nomVend
         txtNombre.IsEnabled = "False"
-        txtCedula.IsEnabled = "False"
+        txtCedula.IsEnabled = "true"
         txtTelefono.IsEnabled = "False"
         texDireccion.IsEnabled = "False"
         txtApellido.IsEnabled = "false"
+        txtFecha.Text = Mid(vfecha, 1, 10)
+        txtFecha.IsReadOnly = True
         txtsubtotalFinal.Text = 0.00
         txtIva.Text = 0.00
         txttotal.Text = 0.00
         txtNfactura.IsEnabled = "true"
-
-
+        comboBoxPago.Items.Add("Efectivo")
+        comboBoxPago.Items.Add("Tarjeta de credito")
+        comboBoxPago.Items.Add("Dinero Electronico")
     End Sub
 
     Private Sub txtCodigo_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCodigo.KeyDown
@@ -128,13 +137,11 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
 
             If Not existe Then
                 MessageBox.Show("Cliente no Existe")
-                txtNombre.Text = ""
-                txtCedula.Text = ""
-                txtTelefono.Text = ""
-                texDireccion.Text = ""
-                txtApellido.Text = ""
-
-
+                'txtNombre.Text = ""
+                'txtCedula.Text = ""
+                'txtTelefono.Text = ""
+                'texDireccion.Text = ""
+                'txtApellido.Text = ""
             End If
         End If
     End Sub
@@ -164,13 +171,13 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
                     NuevoCliente.IsEnabled = "False"
                     txtApellido.IsEnabled = "false"
                     Exit For
-                Else
-                    txtNombre.IsEnabled = "true"
-                    txtApellido.IsEnabled = "true"
-                    txtCedula.IsEnabled = "true"
-                    txtTelefono.IsEnabled = "true"
-                    texDireccion.IsEnabled = "true"
-                    NuevoCliente.IsEnabled = "true"
+                    'Else
+                    '    txtNombre.IsEnabled = "true"
+                    '    txtApellido.IsEnabled = "true"
+                    '    txtCedula.IsEnabled = "true"
+                    '    txtTelefono.IsEnabled = "true"
+                    '    texDireccion.IsEnabled = "true"
+                    '    NuevoCliente.IsEnabled = "true"
                 End If
 
             Next
@@ -197,7 +204,6 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
     End Sub
 
     Private Sub ValordeIva()
-
         If (txtProvincia.Text = "Esmeraldas" Or txtProvincia.Text = "Manabi") Then
             porIva = 0.12
         Else
@@ -206,8 +212,98 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
     End Sub
 
     Private Sub porcDevolucion()
-        If (txtPago.Text = "") Then
-
+        If (comboBoxPago.SelectedValue.ToString = "Dinero Electronico") Then
+            txtdevolucion.Text = Val(txttotal.Text * 0.04)
+        ElseIf (comboBoxPago.SelectedValue.ToString = "Tarjeta de Credito") Then
+            txtdevolucion.Text = Val(CDbl(txttotal.Text) * 0.02)
+        Else
+            txtdevolucion.Text = 0.00
         End If
+    End Sub
+
+    Private Sub txtCedula_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCedula.KeyDown
+        If e.Key = Key.Enter Then
+            txtNombre.Text = ""
+            txtTelefono.Text = ""
+            texDireccion.Text = ""
+            txtApellido.Text = ""
+            Me.validarExistenciaPorCedula()
+
+            If Not existe Then
+                MessageBox.Show("Cliente no Existe")
+                'txtNombre.Text = ""
+                'txtCedula.Text = ""
+                'txtTelefono.Text = ""
+                'texDireccion.Text = ""
+                'txtApellido.Text = ""
+            End If
+        End If
+    End Sub
+
+    Public Sub validarExistenciaPorCedula()
+        result2 = txtCedula.Text
+        Using dbConexion As New OleDbConnection(strConexion) 'entrar y salir de la base
+            Dim strQuery As String = "SELECT * FROM cliente"
+            Dim dbAdapter As New OleDbDataAdapter(strQuery, strConexion)
+            Dim dsMaster As New DataSet("Datos")
+            dbAdapter.Fill(dsMaster, "Cliente")
+
+            For Each em As DataRow In dsMaster.Tables("Cliente").Rows
+                If (em(3) = result2) Then
+                    txtCodigo.Text = em(0)
+                    txtNombre.Text = em(1)
+                    txtApellido.Text = em(2)
+                    txtCedula.Text = em(3)
+                    txtTelefono.Text = em(4)
+                    texDireccion.Text = em(5)
+                    existe = True
+                    txtNombre.IsEnabled = "False"
+                    'txtCedula.IsEnabled = "False"
+                    txtTelefono.IsEnabled = "False"
+                    texDireccion.IsEnabled = "False"
+                    NuevoCliente.IsEnabled = "False"
+                    txtApellido.IsEnabled = "false"
+                    Exit For
+                    'Else
+                    '    txtNombre.IsEnabled = "true"
+                    '    txtApellido.IsEnabled = "true"
+                    '    txtCedula.IsEnabled = "true"
+                    '    txtTelefono.IsEnabled = "true"
+                    '    texDireccion.IsEnabled = "true"
+                    '    NuevoCliente.IsEnabled = "true"
+                End If
+
+            Next
+
+        End Using
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As RoutedEventArgs) Handles btnEliminar.Click
+        Using dbconexion As New OleDbConnection(strConexion)
+            Dim consulta As String = "SELECT * From factura"
+            Dim dbadapter As New OleDbDataAdapter(consulta, strConexion)
+            Dim dsMaster2 As New DataSet("Datos")
+            dbadapter.Fill(dsMaster2, "Factura")
+
+            Dim fila As DataRowView = DGdetalle.SelectedItem
+            For Each em As DataRow In dsMaster2.Tables("Factura").Rows
+                If ((em(10) = fila(1)) And (txtNfactura.Text = em(1))) Then
+                    MessageBox.Show("se encontro")
+                    Exit For
+                    'Else
+                    '    txtNombre.IsEnabled = "true"
+                    '    txtApellido.IsEnabled = "true"
+                    '    txtCedula.IsEnabled = "true"
+                    '    txtTelefono.IsEnabled = "true"
+                    '    texDireccion.IsEnabled = "true"
+                    '    NuevoCliente.IsEnabled = "true"
+                End If
+
+            Next
+
+            'MessageBox.Show(fila(1))
+
+        End Using
+
     End Sub
 End Class
