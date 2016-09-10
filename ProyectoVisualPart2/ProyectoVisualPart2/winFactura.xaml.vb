@@ -3,6 +3,7 @@ Imports System.Data.OleDb
 Imports System.IO
 Imports System.Net.WebRequestMethods
 
+
 Public Class winFactura
     Private strPath = "..\..\dataBaseVisual.mdb"
     Private strConexion As String = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" & strPath
@@ -15,6 +16,7 @@ Public Class winFactura
     Dim vfecha As Date = Now
     Public valor As Double
     Public valor2 As Double
+    Public valores As Integer
 
 
 
@@ -58,45 +60,48 @@ Public Class winFactura
         txtSubt.Text = Val(CDbl(txtpUnitario.Text) * txtcantid.Text)
         txtsubtotalFinal.Text = Val(txtSubt.Text + CDbl(txtsubtotalFinal.Text))
         calcular()
+        If (comboBoxPago.SelectedItem = "") Then
+            MessageBox.Show("No ha especificado el tipo de pago")
+        Else
+            Dim newfact As New winFactura
+            Using conexion As New OleDbConnection(strConexion)
+                conexion.Open()
+                Dim Insertar As String
+                Insertar = "INSERT INTO Proxfactura ( [Nfactura], [NombreCliente], [ApeCliente], [CodCliente], [CedCliente], [ForPago], [Vendedor], [Fecha], [codProd] ,[Descripcion] , [Punitario], [Cantidad], [Subtotal],[SubFinal], [Descuento], [Iva] ,[Total] ) 
+        values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedula.Text,comboBoxPago.SelectedValue.ToString,txtVendedor.Text,txtFecha.Text,txtcodigoPro.Text,nombreProducto.Text,txtpUnitario.Text,txtcantid.Text,txtSubt.Text,txtsubtotalFinal.Text,txtdescuento.Text,txtIva.Text,txttotal.Text)"
+                Dim cmd As OleDbCommand = New OleDbCommand(Insertar, conexion)
+                cmd.Parameters.Add(New OleDbParameter("Nfactura", CType(txtNfactura.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("NombreCliente", CType(txtNombre.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("ApeCliente", CType(txtApellido.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("CodCliente", CType(txtCodigo.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("CedCliente", CType(txtCedula.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("ForPago", CType(comboBoxPago.SelectedValue.ToString, String)))
+                cmd.Parameters.Add(New OleDbParameter("Vendedor", CType(txtVendedor.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Fecha", CType(txtFecha.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("codProd", CType(txtcodigoPro.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Descripcion", CType(nombreProducto.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Punitario", CType(txtpUnitario.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Cantidad", CType(txtcantid.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Subtotal", CType(txtSubt.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("SubFinal", CType(txtsubtotalFinal.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Descuento", CType(txtdescuento.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Iva", CType(txtIva.Text, String)))
+                cmd.Parameters.Add(New OleDbParameter("Total", CType(txttotal.Text, String)))
+                cmd.ExecuteNonQuery()
+            End Using
+            limpiar()
 
-        Dim newfact As New winFactura
-        Using conexion As New OleDbConnection(strConexion)
-            conexion.Open()
-            Dim Insertar As String
-            Insertar = "INSERT INTO Proxfactura ( [Nfactura], [NombreCliente], [ApeCliente], [CodCliente], [CedCliente], [ForPago], [Vendedor], [Fecha], [codProd] ,[Descripcion] , [Punitario], [Cantidad], [Subtotal],[SubFinal], [Descuento], [Iva] ,[Total] ) 
-values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedula.Text,comboBoxPago.SelectedValue.ToString,txtVendedor.Text,txtFecha.Text,txtcodigoPro.Text,nombreProducto.Text,txtpUnitario.Text,txtcantid.Text,txtSubt.Text,txtsubtotalFinal.Text,txtdescuento.Text,txtIva.Text,txttotal.Text)"
-            Dim cmd As OleDbCommand = New OleDbCommand(Insertar, conexion)
-            cmd.Parameters.Add(New OleDbParameter("Nfactura", CType(txtNfactura.Text, String)))
-            cmd.Parameters.Add(New OleDbParameter("NombreCliente", CType(txtNombre.Text, String)))
-            cmd.Parameters.Add(New OleDbParameter("ApeCliente", CType(txtApellido.Text, String)))
-            cmd.Parameters.Add(New OleDbParameter("CodCliente", CType(txtCodigo.Text, String)))
-            cmd.Parameters.Add(New OleDbParameter("CedCliente", CType(txtCedula.Text, String)))
-            cmd.Parameters.Add(New OleDbParameter("ForPago", CType(comboBoxPago.SelectedValue.ToString, String)))
-            cmd.Parameters.Add(New OleDbParameter("Vendedor", CType(txtVendedor.Text, String)))
-            cmd.Parameters.Add(New OleDbParameter("Fecha", CType(txtFecha.Text, String)))
-            cmd.Parameters.Add(New OleDbParameter("codProd", CType(txtcodigoPro.Text, String)))
-            cmd.Parameters.Add(New OleDbParameter("Descripcion", CType(nombreProducto.Text, String)))
-            cmd.Parameters.Add(New OleDbParameter("Punitario", CType(txtpUnitario.Text, String)))
-            cmd.Parameters.Add(New OleDbParameter("Cantidad", CType(txtcantid.Text, String)))
-            cmd.Parameters.Add(New OleDbParameter("Subtotal", CType(txtSubt.Text, String)))
-            cmd.Parameters.Add(New OleDbParameter("SubFinal", CType(txtsubtotalFinal.Text, String)))
-            cmd.Parameters.Add(New OleDbParameter("Descuento", CType(txtdescuento.Text, String)))
-            cmd.Parameters.Add(New OleDbParameter("Iva", CType(txtIva.Text, String)))
-            cmd.Parameters.Add(New OleDbParameter("Total", CType(txttotal.Text, String)))
-            cmd.ExecuteNonQuery()
-        End Using
-        limpiar()
+            Using conexion As New OleDbConnection(strConexion)
+                Dim strQuery2 As String = "SELECT codProd , Descripcion , Punitario , Cantidad , Subtotal FROM Proxfactura WHERE Nfactura='" & txtNfactura.Text & "'"
+                Dim dbAdapter2 As New OleDbDataAdapter(strQuery2, strConexion)
+                Dim dsMaster2 As New DataSet("Datos")
+                dbAdapter2.Fill(dsMaster2, "Factura")
+                DGdetalle.DataContext = dsMaster2
+                newfact.UpdateDataGrid()
+            End Using
 
-        Using conexion As New OleDbConnection(strConexion)
-            Dim strQuery2 As String = "SELECT codProd , Descripcion , Punitario , Cantidad , Subtotal FROM Proxfactura WHERE Nfactura='" & txtNfactura.Text & "'"
-            Dim dbAdapter2 As New OleDbDataAdapter(strQuery2, strConexion)
-            Dim dsMaster2 As New DataSet("Datos")
-            dbAdapter2.Fill(dsMaster2, "Factura")
-            DGdetalle.DataContext = dsMaster2
-            newfact.UpdateDataGrid()
-        End Using
-        porcDevolucion()
-
+            porcDevolucion()
+        End If
 
     End Sub
 
@@ -118,6 +123,7 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
         comboBoxPago.Items.Add("Efectivo")
         comboBoxPago.Items.Add("Tarjeta de credito")
         comboBoxPago.Items.Add("Dinero Electronico")
+        ValidarNfactura()
     End Sub
 
     Private Sub txtCodigo_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCodigo.KeyDown
@@ -133,6 +139,7 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
                 MessageBox.Show("Cliente no Existe")
             End If
         End If
+
     End Sub
 
 
@@ -196,7 +203,7 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
     Private Sub porcDevolucion()
         If (comboBoxPago.SelectedValue.ToString = "Dinero Electronico") Then
             txtdevolucion.Text = Val(txttotal.Text * 0.04)
-        ElseIf (comboBoxPago.SelectedValue.ToString = "Tarjeta de Credito") Then
+        ElseIf (comboBoxPago.SelectedValue.ToString = "Tarjeta de credito") Then
             txtdevolucion.Text = Val(CDbl(txttotal.Text) * 0.02)
         Else
             txtdevolucion.Text = 0.00
@@ -298,12 +305,13 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
             cmd.ExecuteNonQuery()
             Try
                 MessageBox.Show("Se guardo la factura con exito..!!")
+                AñadirValorCliente()
                 CleanAll()
-
             Catch ex As Exception
                 MessageBox.Show("Error al guardar")
             End Try
         End Using
+
     End Sub
 
     Private Sub CleanAll()
@@ -323,5 +331,69 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
         txttotal.Text = 0.00
         txtdevolucion.Text = 0.00
         DGdetalle.DataContext = ""
+    End Sub
+
+    Private Sub ValidarNfactura()
+        Using conexion As New OleDbConnection(strConexion)
+            Dim consulta As String = "SELECT * FROM Facturas"
+            Dim dbAdapter As New OleDbDataAdapter(consulta, conexion)
+            Dim dsMaster2 As New DataSet("Datos")
+            dbAdapter.Fill(dsMaster2, "Factura")
+
+            For Each fact As DataRow In dsMaster2.Tables("Factura").Rows
+                valores = fact(1)
+            Next
+        End Using
+        txtNfactura.Text = "000" & (valores + 1)
+
+    End Sub
+
+    Private Sub nuevaFactura_Click(sender As Object, e As RoutedEventArgs) Handles nuevaFactura.Click
+        deleteDfACT()
+    End Sub
+
+    Private Sub btnCancelar_Click(sender As Object, e As RoutedEventArgs) Handles btnCancelar.Click
+        deleteDfACT()
+    End Sub
+
+    Public Sub deleteDfACT()
+        Using dbconexion As New OleDbConnection(strConexion)
+            Dim consulta As String = "SELECT * From Proxfactura"
+            Dim dbadapter As New OleDbDataAdapter(consulta, strConexion)
+            Dim dsMaster2 As New DataSet("Datos")
+            dbadapter.Fill(dsMaster2, "Factura")
+            For Each em As DataRow In dsMaster2.Tables("Factura").Rows
+                Dim filaElim As String = "DELETE * From Proxfactura WHERE Nfactura='" & txtNfactura.Text & "'"
+                Dim dbAdapter3 As New OleDbDataAdapter(filaElim, strConexion)
+                Dim dsMaster3 As New DataSet("Datos")
+                dbAdapter3.Fill(dsMaster3, "Factura")
+
+                Exit For
+
+            Next
+            CleanAll()
+        End Using
+    End Sub
+
+    Private Sub AñadirValorCliente()
+        Dim valCli As Double
+
+        Using dbconexion As New OleDbConnection(strConexion)
+            dbconexion.Open()
+            Dim consulta As String = "SELECT * From cliente WHERE Id='" & txtCodigo.Text & "'"
+            Dim dbadapter As New OleDbDataAdapter(consulta, strConexion)
+            Dim dsMaster2 As New DataSet("Datos")
+            dbadapter.Fill(dsMaster2, "Factura")
+            For Each em As DataRow In dsMaster2.Tables("Factura").Rows
+                valCli = Val(em(6) + CDbl(txttotal.Text))
+            Next
+
+            MessageBox.Show(valCli)
+            Dim consulta2 As String = "UPDATE cliente SET ValorTotal='" & valCli & "' WHERE Id='" & txtCodigo.Text & "'"
+            Dim cmd As OleDbCommand = New OleDbCommand(consulta2, dbconexion)
+            cmd.ExecuteNonQuery()
+
+        End Using
+
     End Sub
 End Class

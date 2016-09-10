@@ -43,6 +43,8 @@ Public Class winVendedor
         nomVend = txtNombre.Text
     End Sub
 
-
-
+    Private Sub MenuItem_Click_1(sender As Object, e As RoutedEventArgs)
+        Dim searchFact As New winBuscarFactura
+        searchFact.Show()
+    End Sub
 End Class
