@@ -37,9 +37,10 @@ Public Class winAdmi
     End Sub
 
     Private Sub buscar_Facturas_Click(sender As Object, e As RoutedEventArgs) Handles buscar_Facturas.Click
-        Dim winNewl As New winListaFacturas
-        winNewl.Owner = Me
-        winNewl.Show()
+        Dim winSearch As New winBuscarFactura
+        winSearch.Owner = Me
+        winSearch.Show()
+        Me.Hide()
     End Sub
 
     Private Sub cerrar_Click(sender As Object, e As RoutedEventArgs) Handles cerrar.Click
