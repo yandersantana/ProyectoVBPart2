@@ -14,13 +14,7 @@
             <MenuItem x:Name="listar_Vendedores" Background="#FFD4E2DE" Header="Listar Vendedores"/>
             <MenuItem x:Name="listar_Producto" Background="#FFD4E2DE" Header="Listar Productos"/>
             <MenuItem x:Name="buscar_Facturas" Background="#FFD4E2DE" Header="Buscar Facturas"/>
-            <MenuItem x:Name="inventario" Background="#FFFF9F4F" Header="Inventario">
-                <MenuItem Background="#FF0A0000" Foreground="Snow" Header="Total Ventas"/>
-                <MenuItem Background="Black" Foreground="White" Header="Lugar de Mayor demanda"/>
-                <MenuItem Background="Black" Foreground="White" Header="Mejores Clientes"/>
-                <MenuItem Header="Mejores Vendedores"/>
-            </MenuItem>
-            <MenuItem Background="#FF80DEDE" Header="Ayuda " Width="58"/>
+            <MenuItem x:Name="inventario" Background="#FFFF9F4F" Header="Inventario"/>
             <Button x:Name="cerrar" Background="#FF110202" Content="Cerrar Sesión" Foreground="White" Height="43" Width="92"/>
         </Menu>
         <Label x:Name="label" Content="Nombre" HorizontalAlignment="Left" Margin="289,144,0,0" VerticalAlignment="Top" Width="82"/>

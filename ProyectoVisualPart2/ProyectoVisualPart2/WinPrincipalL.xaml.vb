@@ -64,5 +64,6 @@ Class WinPrincipalL
 
     Private Sub btn_cancelar_Click(sender As Object, e As RoutedEventArgs) Handles btn_cancelar.Click
         Me.Close()
+        Forms.Application.Exit() 'cierra todo el programa
     End Sub
 End Class

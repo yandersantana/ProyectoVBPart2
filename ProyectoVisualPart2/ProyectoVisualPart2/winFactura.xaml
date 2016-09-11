@@ -58,10 +58,8 @@
         <TextBox x:Name="txttotal" HorizontalAlignment="Left" Height="41" Margin="848,548,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Background="#FFC7F2F9" Grid.Row="1" FontSize="16" TextAlignment="Center" Grid.Column="1"/>
         <TextBox x:Name="txtdescuento" HorizontalAlignment="Left" Height="23" Margin="848,478,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsEnabled="False" Background="#FFD4F0DC" Grid.Row="1" TextAlignment="Right" Grid.Column="1"/>
         <Label x:Name="label7_Copy" Content="Descuento" HorizontalAlignment="Left" Margin="750,477,0,0" VerticalAlignment="Top" Grid.Row="1" Grid.Column="1"/>
-        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="12,462,0,0" VerticalAlignment="Top" Width="138" Height="54" FontSize="14" Background="#FFF9B6B6" BorderBrush="#FFFF4949" Grid.Row="1" Grid.Column="1"/>
-        <Button x:Name="nuevaFactura" Content="Nueva factura" HorizontalAlignment="Left" Margin="176,462,0,0" VerticalAlignment="Top" Width="136" Height="54" FontSize="14" Background="#FFFAFFE9" BorderBrush="#FFD4D4A3" Grid.Row="1" Grid.Column="1"/>
-        <Button x:Name="btnGuardarFactura" Content="Guardar Factura" HorizontalAlignment="Left" Margin="340,462,0,0" VerticalAlignment="Top" Width="138" Height="54" FontSize="14" Background="#FFE9FFF9" BorderBrush="#FF8BCDB8" Grid.Row="1" Grid.Column="1"/>
-        <Button x:Name="salir" Content="Salir" HorizontalAlignment="Left" Margin="156,544,0,0" VerticalAlignment="Top" Width="164" RenderTransformOrigin="0.5,0.5" Height="41" Background="#FFFDF0E3" FontSize="20" BorderBrush="#FFF7D6D3" Grid.Row="1" Grid.Column="1">
+        <Button x:Name="btnGuardarFactura" Content="Guardar Factura" HorizontalAlignment="Left" Margin="58,478,0,0" VerticalAlignment="Top" Width="136" Height="67" FontSize="14" Background="#FFE9FFF9" BorderBrush="#FF8BCDB8" Grid.Row="1" Grid.Column="1"/>
+        <Button x:Name="salir" Content="Salir" HorizontalAlignment="Left" Margin="263,478,0,0" VerticalAlignment="Top" Width="158" RenderTransformOrigin="0.5,0.5" Height="62" Background="#FFFDF0E3" FontSize="20" BorderBrush="#FFF7D6D3" Grid.Row="1" Grid.Column="1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

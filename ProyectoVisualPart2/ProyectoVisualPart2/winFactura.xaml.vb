@@ -38,7 +38,8 @@ Public Class winFactura
                     If (em(0) = result) Then
                         nombreProducto.Text = em(1)
                         txtpUnitario.Text = em(2)
-
+                        txtcantid.Text = 1
+                        agregar.IsEnabled = True
                         existe = True
 
                         Exit For
@@ -93,6 +94,8 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
             Dim dsMaster2 As New DataSet("Datos")
             dbAdapter2.Fill(dsMaster2, "Factura")
             DGdetalle.DataContext = dsMaster2
+            btnEliminar.IsEnabled = True
+            btnGuardarFactura.IsEnabled = True
             newfact.UpdateDataGrid()
         End Using
         porcDevolucion()
@@ -142,6 +145,12 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
         comboProvincias.Items.Add("Sucumbios")
         comboProvincias.Items.Add("Tungurahua")
         comboProvincias.Items.Add("Zamora Chinchipe")
+        comboProvincias.SelectedItem = "Guayas"
+        comboBoxPago.SelectedItem = "Efectivo"
+        txtcantid.Text = 1
+        btnEliminar.IsEnabled = False
+        btnGuardarFactura.IsEnabled = False
+        agregar.IsEnabled = False
     End Sub
 
     Private Sub txtCodigo_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCodigo.KeyDown
@@ -304,23 +313,26 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
     End Sub
 
     Private Sub btnGuardarFactura_Click(sender As Object, e As RoutedEventArgs) Handles btnGuardarFactura.Click
+
         Using conexion As New OleDbConnection(strConexion)
             conexion.Open()
             Dim Insertar As String
-            Insertar = "INSERT INTO Facturas ( [Nfactura], [NombreCliente], [ApeCliente], [CodCliente], [CedCliente], [ForPago], [Vendedor], [Fecha],[Total],[DevolucionIva] ) 
-values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedula.Text,comboBoxPago.SelectedValue.ToString,txtVendedor.Text,txtFecha.Text,txttotal.Text,txtdevolucion.Text)"
+            Insertar = "INSERT INTO Facturas ( [Nfactura], [NombreCliente], [ApeCliente], [CodCliente], [CedCliente],[Provincia], [ForPago], [Vendedor], [Fecha],[Total],[DevolucionIva] ) 
+values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedula.Text,comboProvincias.SelectedValue.ToString,comboBoxPago.SelectedValue.ToString,txtVendedor.Text,txtFecha.Text,txttotal.Text,txtdevolucion.Text)"
             Dim cmd As OleDbCommand = New OleDbCommand(Insertar, conexion)
             cmd.Parameters.Add(New OleDbParameter("Nfactura", CType(txtNfactura.Text, String)))
             cmd.Parameters.Add(New OleDbParameter("NombreCliente", CType(txtNombre.Text, String)))
             cmd.Parameters.Add(New OleDbParameter("ApeCliente", CType(txtApellido.Text, String)))
             cmd.Parameters.Add(New OleDbParameter("CodCliente", CType(txtCodigo.Text, String)))
             cmd.Parameters.Add(New OleDbParameter("CedCliente", CType(txtCedula.Text, String)))
+            cmd.Parameters.Add(New OleDbParameter("Provincia", CType(comboProvincias.SelectedValue.ToString, String)))
             cmd.Parameters.Add(New OleDbParameter("ForPago", CType(comboBoxPago.SelectedValue.ToString, String)))
             cmd.Parameters.Add(New OleDbParameter("Vendedor", CType(txtVendedor.Text, String)))
             cmd.Parameters.Add(New OleDbParameter("Fecha", CType(txtFecha.Text, String)))
             cmd.Parameters.Add(New OleDbParameter("Total", CType(txttotal.Text, Double)))
             cmd.Parameters.Add(New OleDbParameter("DevolucionIva", CType(txtdevolucion.Text, Double)))
             cmd.ExecuteNonQuery()
+
             Try
                 MessageBox.Show("Se guardo la factura con exito..!!")
                 CleanAll()
@@ -348,5 +360,7 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
         txttotal.Text = 0.00
         txtdevolucion.Text = 0.00
         DGdetalle.DataContext = ""
+        txtcantid.Text = 1
     End Sub
+
 End Class

@@ -12,6 +12,9 @@ Public Class winVendedor
     Public Shared nomVend
 
     Private Sub newFac_Click(sender As Object, e As RoutedEventArgs) Handles newFac.Click
+
+
+
         Dim winFac As New winFactura
         winFac.Owner = Me
         winFac.Show()

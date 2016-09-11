@@ -70,4 +70,10 @@ Public Class winAdmi
         End Using
 
     End Sub
+
+    Private Sub inventario_Click(sender As Object, e As RoutedEventArgs) Handles inventario.Click
+        Dim winIn As New winInventario
+        winIn.Owner = Me
+        winIn.Show()
+    End Sub
 End Class

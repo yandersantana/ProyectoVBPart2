@@ -20,8 +20,7 @@
         <Button x:Name="btnRegistrar" Content="Registrar" HorizontalAlignment="Left" Margin="20,318,0,0" VerticalAlignment="Top" Width="119" FontFamily="Showcard Gothic" FontSize="14" Height="33"/>
         <Label x:Name="label_Copy10" Content="Codigo:" HorizontalAlignment="Left" Margin="20,62,0,0" VerticalAlignment="Top" Height="39" Width="96" FontFamily="Chiller" FontSize="18"/>
         <TextBox x:Name="txtcodigo" Text ="{Binding Id}" HorizontalAlignment="Left" Height="25" Margin="190,64,-72,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255"/>
-        <Button x:Name="btnCancel" Content="Cancelar" HorizontalAlignment="Left" Margin="326,318,0,0" VerticalAlignment="Top" Width="119" FontFamily="Showcard Gothic" FontSize="14" Height="33"/>
-        <Button x:Name="btnActualizar" Content="Actualizar" HorizontalAlignment="Left" Margin="176,318,0,0" VerticalAlignment="Top" Width="119" FontFamily="Showcard Gothic" FontSize="14" Height="33"/>
+        <Button x:Name="btnCancel" Content="Salir" HorizontalAlignment="Left" Margin="326,318,0,0" VerticalAlignment="Top" Width="119" FontFamily="Showcard Gothic" FontSize="14" Height="33"/>
         <TextBox x:Name="txtcedula" Text ="{Binding CedulaIdentidad}" HorizontalAlignment="Left" Height="26" Margin="190,181,-72,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255"/>
 
     </Grid>

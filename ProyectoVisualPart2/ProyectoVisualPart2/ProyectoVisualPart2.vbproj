@@ -73,6 +73,9 @@
     <Compile Include="winBuscarFactura.xaml.vb">
       <DependentUpon>winBuscarFactura.xaml</DependentUpon>
     </Compile>
+    <Compile Include="winInventario.xaml.vb">
+      <DependentUpon>winInventario.xaml</DependentUpon>
+    </Compile>
     <Compile Include="winNewCliente.xaml.vb">
       <DependentUpon>winNewCliente.xaml</DependentUpon>
     </Compile>
@@ -139,6 +142,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="winInformacionCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winInventario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
