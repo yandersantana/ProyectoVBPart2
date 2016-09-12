@@ -25,7 +25,7 @@ Public Class winBuscarFactura
                     dbAdapter.Fill(dsMaster, "Facturas")
 
                     For Each em As DataRow In dsMaster.Tables("Facturas").Rows
-                        If (em(0) = result) Then
+                        If (em(1) = result) Then
                             num = Convert.ToUInt32(em(0).ToString)
                             winFac = New winFactura
                             winFac.agregar.IsEnabled = False
@@ -43,17 +43,22 @@ Public Class winBuscarFactura
                             winFac.txtFecha.IsEnabled = False
                             winFac.Owner = Me
                             winFac.salir.IsEnabled = True
-                            winFac.txtNfactura.Text = em(1)
+
                             winFac.txtNombre.Text = em(2)
                             winFac.txtApellido.Text = em(3)
                             winFac.txtCedula.Text = em(5)
-                            winFac.txtVendedor.Text = em(7)
-                            winFac.txtFecha.Text = em(8)
+
+
                             Me.llenarDataGridFactura()
                             winFac.Show()
                             Me.Hide()
                             existe = True
-
+                            winFac.txtNfactura.Text = em(1)
+                            winFac.comboBoxPago.SelectedItem = em(6)
+                            winFac.comboProvincias.SelectedItem = em(7)
+                            winFac.txtFecha.Text = em(9)
+                            winFac.txttotal.Text = em(10)
+                            winFac.txtdevolucion.Text = em(11)
                             Exit For
                         End If
 
@@ -99,4 +104,10 @@ Public Class winBuscarFactura
         numero = aux
         Return numero
     End Function
+
+    Private Sub button_Click(sender As Object, e As RoutedEventArgs) Handles button.Click
+        Dim winBusAvan As New winBuscarFacturaXmetAvan
+        winBusAvan.Show()
+
+    End Sub
 End Class

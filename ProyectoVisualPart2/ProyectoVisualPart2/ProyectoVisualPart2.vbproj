@@ -70,8 +70,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="WinBuscarCliente.xaml.vb">
+      <DependentUpon>WinBuscarCliente.xaml</DependentUpon>
+    </Compile>
     <Compile Include="winBuscarFactura.xaml.vb">
       <DependentUpon>winBuscarFactura.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="winBuscarFacturaXmetAvan.xaml.vb">
+      <DependentUpon>winBuscarFacturaXmetAvan.xaml</DependentUpon>
     </Compile>
     <Compile Include="winInventario.xaml.vb">
       <DependentUpon>winInventario.xaml</DependentUpon>
@@ -129,7 +135,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="WinBuscarCliente.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="winBuscarFactura.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="winBuscarFacturaXmetAvan.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

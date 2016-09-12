@@ -1,0 +1,21 @@
+﻿<Window x:Class="winBuscarFacturaXmetAvan"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProyectoVisualPart2"
+        mc:Ignorable="d"
+        Title="winBuscarFacturaXmetAvan" Height="325.5" Width="570.588" Loaded="Window_Loaded">
+    <Grid>
+        <GroupBox x:Name="groupBox" Header="Buscar por:" HorizontalAlignment="Left" Height="97" Margin="10,10,0,0" VerticalAlignment="Top" Width="530">
+            <ComboBox x:Name="comboBoxBuscarPor" HorizontalAlignment="Left" Height="23" Margin="230,7,0,0" VerticalAlignment="Top" Width="156"/>
+        </GroupBox>
+        <Label x:Name="label" Content="Seleccione el mètodo de busqueda:" HorizontalAlignment="Left" Height="29" Margin="30,30,0,0" VerticalAlignment="Top" Width="203"/>
+        <Label x:Name="label_Copy" Content="Ingrese los datos a buscar:" HorizontalAlignment="Left" Height="29" Margin="30,63,0,0" VerticalAlignment="Top" Width="203"/>
+        <TextBox x:Name="txtInf" HorizontalAlignment="Left" Height="20" Margin="246,68,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="155"/>
+        <Button x:Name="btnBusc" Content="Buscar" HorizontalAlignment="Left" Height="29" Margin="419,48,0,0" VerticalAlignment="Top" Width="110"/>
+        <DataGrid x:Name="dtgDet"  ItemsSource="{Binding Cliente}" HorizontalAlignment="Left" Height="112" Margin="10,130,0,0" VerticalAlignment="Top" Width="530"/>
+        <Button x:Name="btnSalirBusqueda" Content="Salir" HorizontalAlignment="Left" Height="29" Margin="221,256,0,0" VerticalAlignment="Top" Width="110"/>
+
+    </Grid>
+</Window>

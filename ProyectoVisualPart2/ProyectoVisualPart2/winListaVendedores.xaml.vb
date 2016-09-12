@@ -24,9 +24,7 @@ Public Class winListaVendedores
         Dim newvendedor As New winNewVendedor
         newvendedor.Owner = Me
         Dim unVendedor As New Vendedor(fila(0), fila(1), fila(2), fila(3), fila(4), fila(5), fila(6), fila(7), fila(8), fila(9), fila(10), fila(11))
-        MessageBox.Show(fila(10))
         newvendedor.DataContext = unVendedor
-        'newvendedor.IsEnabled = False
         newvendedor.Show()
         Me.Hide()
 

@@ -10,7 +10,7 @@
         <Menu x:Name="menu" HorizontalAlignment="Left" Height="38" VerticalAlignment="Top" Width="563" Margin="0,0,-73,-38" Background="#FF746F6F">
             <MenuItem x:Name="newFac" Background="#FF1B0303" Foreground="#FFFFF7F7" Header="Nueva Factura" Height="38"/>
             <MenuItem x:Name="buscarFactura" Background="Black" Foreground="White" Header="Buscar Factura"/>
-            <MenuItem Background="Black" Foreground="White" Header="Buscar Cliente"/>
+            <MenuItem Background="Black" Foreground="White" Header="Buscar Cliente" Click="MenuItem_Click_1"/>
             <Separator Background="#FF727272" Foreground="#FF230404" Width="200"/>
             <MenuItem Background="Black" Foreground="White" Header="Cerrar Sesion" Click="MenuItem_Click"/>
         </Menu>

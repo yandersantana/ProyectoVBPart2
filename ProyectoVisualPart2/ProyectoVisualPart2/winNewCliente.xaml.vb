@@ -82,6 +82,6 @@ Public Class winNewCliente
 
     Private Sub btnCancel_Click(sender As Object, e As RoutedEventArgs) Handles btnCancel.Click
         Me.Close()
-        Me.Owner.Show()
+
     End Sub
 End Class

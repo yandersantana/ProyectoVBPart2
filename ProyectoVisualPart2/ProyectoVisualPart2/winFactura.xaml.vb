@@ -18,6 +18,7 @@ Public Class winFactura
 
 
 
+
     Private Sub salir_Click(sender As Object, e As RoutedEventArgs) Handles salir.Click
         Me.Close()
         Me.Owner.Show()
@@ -121,36 +122,14 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
         comboBoxPago.Items.Add("Efectivo")
         comboBoxPago.Items.Add("Tarjeta de credito")
         comboBoxPago.Items.Add("Dinero Electronico")
-        comboProvincias.Items.Add("Azuay")
-        comboProvincias.Items.Add("Bolivar")
-        comboProvincias.Items.Add("Cañar")
-        comboProvincias.Items.Add("Carchi")
-        comboProvincias.Items.Add("Chimborazo")
-        comboProvincias.Items.Add("Cotopaxi")
-        comboProvincias.Items.Add("El Oro")
-        comboProvincias.Items.Add("Esmeraldas")
-        comboProvincias.Items.Add("Galapagos")
-        comboProvincias.Items.Add("Guayas")
-        comboProvincias.Items.Add("Imbabura")
-        comboProvincias.Items.Add("Loja")
-        comboProvincias.Items.Add("Los Rios")
-        comboProvincias.Items.Add("Manabi")
-        comboProvincias.Items.Add("Morona santiago")
-        comboProvincias.Items.Add("Napo")
-        comboProvincias.Items.Add("Orellana")
-        comboProvincias.Items.Add("Pastaza")
-        comboProvincias.Items.Add("Pichincha")
-        comboProvincias.Items.Add("Santa Elena")
-        comboProvincias.Items.Add("Santo Domingo de los Tsachilas")
-        comboProvincias.Items.Add("Sucumbios")
-        comboProvincias.Items.Add("Tungurahua")
-        comboProvincias.Items.Add("Zamora Chinchipe")
+        cargarDatosProvincias()
         comboProvincias.SelectedItem = "Guayas"
         comboBoxPago.SelectedItem = "Efectivo"
         txtcantid.Text = 1
         btnEliminar.IsEnabled = False
         btnGuardarFactura.IsEnabled = False
         agregar.IsEnabled = False
+        AsignarNFactura()
     End Sub
 
     Private Sub txtCodigo_KeyDown(sender As Object, e As KeyEventArgs) Handles txtCodigo.KeyDown
@@ -361,6 +340,47 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
         txtdevolucion.Text = 0.00
         DGdetalle.DataContext = ""
         txtcantid.Text = 1
+    End Sub
+
+    Private Sub AsignarNFactura()
+        Dim numfact As String
+        Using dbconexion As New OleDbConnection(strConexion)
+            Dim consulta As String = "SELECT * From Facturas"
+            Dim dbadapter As New OleDbDataAdapter(consulta, strConexion)
+            Dim dsMaster2 As New DataSet("Datos")
+            dbadapter.Fill(dsMaster2, "Factura")
+            For Each em As DataRow In dsMaster2.Tables("Factura").Rows
+                numfact = em(1) + 1
+            Next
+            txtNfactura.Text = "00" & numfact
+        End Using
+    End Sub
+
+    Private Sub cargarDatosProvincias()
+        comboProvincias.Items.Add("Azuay")
+        comboProvincias.Items.Add("Bolivar")
+        comboProvincias.Items.Add("Cañar")
+        comboProvincias.Items.Add("Carchi")
+        comboProvincias.Items.Add("Chimborazo")
+        comboProvincias.Items.Add("Cotopaxi")
+        comboProvincias.Items.Add("El Oro")
+        comboProvincias.Items.Add("Esmeraldas")
+        comboProvincias.Items.Add("Galapagos")
+        comboProvincias.Items.Add("Guayas")
+        comboProvincias.Items.Add("Imbabura")
+        comboProvincias.Items.Add("Loja")
+        comboProvincias.Items.Add("Los Rios")
+        comboProvincias.Items.Add("Manabi")
+        comboProvincias.Items.Add("Morona santiago")
+        comboProvincias.Items.Add("Napo")
+        comboProvincias.Items.Add("Orellana")
+        comboProvincias.Items.Add("Pastaza")
+        comboProvincias.Items.Add("Pichincha")
+        comboProvincias.Items.Add("Santa Elena")
+        comboProvincias.Items.Add("Santo Domingo de los Tsachilas")
+        comboProvincias.Items.Add("Sucumbios")
+        comboProvincias.Items.Add("Tungurahua")
+        comboProvincias.Items.Add("Zamora Chinchipe")
     End Sub
 
 End Class

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="winCliente" Height="300" Width="603.704">
     <Grid>
-        <DataGrid x:Name="dtgClientes" Margin="0,0,0,159" ItemsSource="{Binding Path=cliente}" AutoGenerateColumns="False" BorderBrush="#FF377EC3">
+        <DataGrid x:Name="dtgClientes" Margin="0,22,0,137" ItemsSource="{Binding Path=cliente}" AutoGenerateColumns="False" BorderBrush="#FF377EC3">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding precio}" Header="Nombre"/>
                 <DataGridTextColumn Binding="{Binding formula}" Header="Apellido"/>

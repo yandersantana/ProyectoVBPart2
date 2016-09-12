@@ -5,16 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoVisualPart2"
         mc:Ignorable="d"
-        Title="winBuscarFactura" Height="300" Width="300">
+        Title="winBuscarFactura" Height="328.5" Width="348">
     <Grid Margin="0,0,2,2">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="5*"/>
             <ColumnDefinition Width="267"/>
             <ColumnDefinition Width="18*"/>
         </Grid.ColumnDefinitions>
-        <Label x:Name="label" Content="Ingrese el código de la factura a buscar" Grid.Column="1" HorizontalAlignment="Left" Margin="25,57,0,0" VerticalAlignment="Top" Width="221" Height="36" Background="#FFF0DFD9"/>
-        <TextBox x:Name="codFac" Grid.Column="1" HorizontalAlignment="Left" Height="35" Margin="21,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236"/>
-        <Button x:Name="salir" Content="Salir" Grid.Column="1" HorizontalAlignment="Left" Margin="91,205,0,0" VerticalAlignment="Top" Width="87" Height="34" Background="#FFE08326" BorderBrush="White" Foreground="#FFFFFDFD"/>
+        <Label x:Name="label" Content="Ingrese el código de la factura a buscar" Grid.Column="1" HorizontalAlignment="Left" Margin="47,57,0,0" VerticalAlignment="Top" Width="220" Height="36" Background="#FFF0DFD9" RenderTransformOrigin="0.425,0.542"/>
+        <TextBox x:Name="codFac" Grid.Column="1" HorizontalAlignment="Left" Height="35" Margin="39,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="236" Grid.ColumnSpan="2"/>
+        <Button x:Name="salir" Content="Salir" Grid.Column="1" HorizontalAlignment="Left" Margin="109,224,0,0" VerticalAlignment="Top" Width="88" Height="34" Background="#FFE08326" BorderBrush="White" Foreground="#FFFFFDFD"/>
+        <Button x:Name="button" Grid.ColumnSpan="2" Content="Busqueda Avanzada >>" Grid.Column="1" HorizontalAlignment="Left" Margin="134,180,0,0" VerticalAlignment="Top" Width="138"/>
 
     </Grid>
 </Window>

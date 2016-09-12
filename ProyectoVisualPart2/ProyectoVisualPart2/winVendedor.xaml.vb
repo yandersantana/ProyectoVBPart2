@@ -52,4 +52,10 @@ Public Class winVendedor
         winSearch.Show()
         Me.Hide()
     End Sub
+
+    Private Sub MenuItem_Click_1(sender As Object, e As RoutedEventArgs)
+        Dim wincli As New WinBuscarCliente
+        wincli.Show()
+
+    End Sub
 End Class
