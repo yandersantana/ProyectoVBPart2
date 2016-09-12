@@ -82,6 +82,26 @@ Public Class winNewCliente
 
     Private Sub btnCancel_Click(sender As Object, e As RoutedEventArgs) Handles btnCancel.Click
         Me.Close()
+        Me.Owner.Show()
+    End Sub
 
+    Private Sub asignarNumCliente()
+        Dim numcliente As String
+        Using dbconexion As New OleDbConnection(strConexion)
+            Dim consulta As String = "SELECT * From cliente"
+            Dim dbadapter As New OleDbDataAdapter(consulta, strConexion)
+            Dim dsMaster2 As New DataSet("Datos")
+            dbadapter.Fill(dsMaster2, "Factura")
+            For Each em As DataRow In dsMaster2.Tables("Factura").Rows
+                numcliente = em(0) + 1
+            Next
+            txtcodigo.Text = "00" & numcliente
+            MessageBox.Show(numcliente)
+        End Using
+    End Sub
+
+    Private Sub Window_Loaded(sender As Object, e As RoutedEventArgs)
+        asignarNumCliente()
+        'txtcodigo.IsEnabled = "false"
     End Sub
 End Class

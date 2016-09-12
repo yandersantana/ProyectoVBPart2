@@ -105,6 +105,7 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
     End Sub
 
     Private Sub factura_Loaded(sender As Object, e As RoutedEventArgs) Handles factura.Loaded
+        AsignarNFactura()
         Dim winFac As New winVendedor
         txtVendedor.Text = winFac.nomVend
         txtNombre.IsEnabled = "False"
@@ -112,6 +113,7 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
         txtTelefono.IsEnabled = "False"
         texDireccion.IsEnabled = "False"
         txtApellido.IsEnabled = "false"
+        txtNfactura.IsEnabled = "false"
         txtFecha.Text = Mid(vfecha, 1, 10)
         txtFecha.IsReadOnly = True
         txtsubtotalFinal.Text = 0.00
@@ -345,14 +347,16 @@ values ( txtNfactura.Text,txtNombre.Text,txtApellido.Text,txtCodigo.Text,txtCedu
     Private Sub AsignarNFactura()
         Dim numfact As String
         Using dbconexion As New OleDbConnection(strConexion)
-            Dim consulta As String = "SELECT * From Facturas"
-            Dim dbadapter As New OleDbDataAdapter(consulta, strConexion)
-            Dim dsMaster2 As New DataSet("Datos")
-            dbadapter.Fill(dsMaster2, "Factura")
-            For Each em As DataRow In dsMaster2.Tables("Factura").Rows
-                numfact = em(1) + 1
+            Dim consulta3 As String = "SELECT * From Facturas"
+            Dim dbadapter3 As New OleDbDataAdapter(consulta3, strConexion)
+            Dim dsMaster3 As New DataSet("Datos")
+            dbadapter3.Fill(dsMaster3, "Factura")
+            For Each em As DataRow In dsMaster3.Tables("Factura").Rows
+
+                numfact = em(1)
             Next
             txtNfactura.Text = "00" & numfact
+
         End Using
     End Sub
 

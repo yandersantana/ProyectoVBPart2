@@ -11,7 +11,7 @@ Public Class winBuscarFacturaXmetAvan
         comboBoxBuscarPor.Items.Add("Fecha")
         comboBoxBuscarPor.Items.Add("Provincia")
         comboBoxBuscarPor.Items.Add("Codigo Cliente")
-        comboBoxBuscarPor.SelectedIndex = "Fecha"
+        comboBoxBuscarPor.SelectedItem = "Fecha"
     End Sub
 
     Private Sub btnBusc_Click(sender As Object, e As RoutedEventArgs) Handles btnBusc.Click

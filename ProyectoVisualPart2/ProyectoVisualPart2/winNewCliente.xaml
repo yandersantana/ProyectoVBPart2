@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProyectoVisualPart2"
         mc:Ignorable="d"
-        Title="winNewCliente" Height="399.999" Width="483.823">
+        Title="winNewCliente" Height="399.999" Width="483.823" Loaded="Window_Loaded">
     <Grid>
         <Label x:Name="label_Copy" Content="Nombre:" HorizontalAlignment="Left" Margin="20,98,0,0" VerticalAlignment="Top" Height="35" Width="119" FontFamily="Chiller" FontSize="18"/>
         <TextBox x:Name="txtNombre" Text ="{Binding Nombre}" HorizontalAlignment="Left" Height="24" Margin="190,101,-72,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255"/>
